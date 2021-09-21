@@ -28,17 +28,18 @@ Pronto, você já tem o nosso repositório na sua máquina
 
 ## 📦 Desenvolvimento
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+### 🛠️ Construído com
+
+Ferramentas utilizadas no projeto
 
 * [Mobster](https://www.free-css.com/free-css-templates/page259/mobster) - O MOBSTER foi utilizado como CSS Template
 * [HTML5](https://maven.apache.org/) - Utilizado para a estrutura da página
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/) -  O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.
 * [VanillaJS](http://vanilla-js.com/) - Usada para gerar a interatividade da página
 
-## 📌 Versão
+### 📌 Versão
 
 O projeto está na sua versão 1.0
 
