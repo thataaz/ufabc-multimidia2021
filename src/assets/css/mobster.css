@@ -177,6 +177,10 @@ hr {
   background-color: #000034 !important;
 }
 
+.bg-tha {
+  background-color: #63003d !important;
+}
+
 .fg-primary {
   color: var(--primary) !important;
 }
