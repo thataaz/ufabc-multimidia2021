@@ -115,76 +115,130 @@
         <div class="card-page mt-3">
           <h5 class="fg-primary">Processamento Básico nas Imagens e Vídeos</h5>
           <hr>
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <audio controls style="max-width: 100%">
-                <source src="../assets/audios/procedimentoslab.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-              </audio>
+          <audio controls style="max-width: 100%">
+            <source src="../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
 
-              <h5>Imagens Originais e versões em P&B</h5>
-              <p>Imagens Originais:</p>
-              <p><div class="text-center mb-3">
-                <img src="../assets/img/avatares.png" alt="Avatares Escolhidos">
-              </div>
-              <div class="text-center mb-3">
-                <img src="../assets/img/grupo.png" alt="Membros do Grupo" min-width="100%">
-              </div>
-
-              <p>Imagens em P&B:</p>
-              <div class="text-center mb-3">
-                <img src="../assets/img/avatares_pb.png" alt="Avatares Escolhidos - Escala de cinza" min-width="100%">
-              </div>
-              <div class="text-center mb-3">
-                <img src="../assets/img/grupo_pb.png" alt="Membros do Grupo - Escala de cinza" min-width="100%">
-              </div>
-              <!-- Video -->
-
-              <h5>Imagens com duas resoluções diferentes</h5>
-              <h5>Avatares modificados:</h5>
-              <p>30% menor</p>
-              <p><div class="text-center mb-3">
-                <img src="../assets/img/avatares_30.png" alt="Avatares - 30% menor">
-              </div>
-              <p> </p>
-              <p>20% menor</p>
-              <div class="text-center mb-3">
-                <img src="../assets/img/avatares_20.png" alt="Avatares - 20% menor" min-width="100%">
-              </div>
-
-              <h5>Fotos do Grupo, modificada</h5>
-              <p>40% menor</p>
-              <div class="text-center mb-3">
-                <img src="../assets/img/grupo_40.png" alt="Grupo - 40% menor" min-width="100%">
-              </div>
-              <p>10% menor</p>
-              <div class="text-center mb-3">
-                <img src="../assets/img/grupo_10.png" alt="Grupo - 10% menor" min-width="100%">
-              </div>
-
-              <h5>Vídeos com resolução alteradas</h5>
-              <p><b>25% dos originais;</b></p>
-              <video width="320" height="240" controls>
-                <source src="../assets/videos/K.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-              <video width="320" height="240" controls>
-                <source src="../assets/videos/K_pulando.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-
-              <p><b>50% dos originais;</b></p>
-              <video width="640" height="480" controls>
-                <source src="../assets/videos/K.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-              <video width="640" height="480" controls>
-                <source src="../assets/videos/K_pulando.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video>
-
-            </div>
+          <h5>Imagens Originais e versões em P&B</h5>
+          <b>Descrição dos procedimentos:</b>
+          <p><b>Linhas 1 e 2:</b> Leitura dos arquivos de imagem - Avatares e foto dos integrantes do grupo. Imagens coloridas: Parâmetro IMREAD_COLOR do OpenCV</p>
+          <p><b>Linhas 3 e 4:</b> Leitura das imagens, em escala de cinza. Parâmetro IMREAD_GRAYSCALE do OpenCV</p>
+          <p><b>Linhas 5-8:</b> Exibição das imagens, por meio de imshow do OpenCV</p>
+          <code>
+            <p>imgavatares = cv.imread(os.path.join(image_path,'avatares.jpg'),cv.IMREAD_COLOR)</p>
+            <p>imggrupo = cv.imread(os.path.join(image_path,'foto-grupo.png'),cv.IMREAD_COLOR)</p>
+            <p>img_gray_avatares = cv.imread(os.path.join(image_path,'avatares.jpg'), cv.IMREAD_GRAYSCALE)</p>
+            <p>img_gray_grupo = cv.imread(os.path.join(image_path,'foto-grupo.png'), cv.IMREAD_GRAYSCALE)</p>
+            <p>cv2_imshow(imgavatares)</p>
+            <p>cv2_imshow(imggrupo)</p>
+            <p>cv2_imshow(img_gray_avatares)</p>
+            <p>cv2_imshow(img_gray_grupo)</p>
+          </code>
+          <p>Imagens Originais:</p>
+          <p><div class="text-center mb-3">
+            <img src="../assets/img/avatares.png" alt="Avatares Escolhidos">
           </div>
+          <div class="text-center mb-3">
+            <img src="../assets/img/grupo.png" alt="Membros do Grupo" min-width="100%">
+          </div>
+
+          <p>Imagens em P&B:</p>
+          <div class="text-center mb-3">
+            <img src="../assets/img/avatares_pb.png" alt="Avatares Escolhidos - Escala de cinza" min-width="100%">
+          </div>
+          <div class="text-center mb-3">
+            <img src="../assets/img/grupo_pb.png" alt="Membros do Grupo - Escala de cinza" min-width="100%">
+          </div>
+          <!-- Video -->
+
+          <h5>Imagens com duas resoluções diferentes</h5>
+          <b>Descrição dos procedimentos:</b>
+          <p><b>Linha 1:</b> Leitura da imagem colorida. image_path é o "caminho" até o arquivo, que está no Google Drive. 'avatares.jpg', é o nome do arquivo. Imagem colorida definida por cv.IMREAD_COLOR </p>
+          <p><b>Linhas 2-3:</b> redimensionamento da imagem, pelo cv.resize.</p>
+          <p>Como parâmetros:</b> (Imagem a ser redimensionada, variável em que deve ser armazenado o resultado, fator de escala para eixo horizontal, fator de escala para eixo vertical, interpolação pelo cv.INTER_CUBIC)</p>
+          <p>Analogamente para Linhas 4-6, porém com a imagem dos integrantes do grupo.</p>
+          <p><b>Linhas 7-10:</b> Exibição das imagens, com o OpenCV</p>
+          <code>
+            <p>imgavatares = cv.imread(os.path.join(image_path,'avatares.jpg'),cv.IMREAD_COLOR)</p>
+            <p>imgavatares30 = cv.resize(imgavatares, None, fx=0.30, fy=0.30, interpolation = cv.INTER_CUBIC)</p>
+            <p>imgavatares20 = cv.resize(imgavatares, None, fx=0.20, fy=0.20, interpolation = cv.INTER_CUBIC)</p>
+            <p>imggrupo = cv.imread(os.path.join(image_path,'foto-grupo.png'),cv.IMREAD_COLOR)</p>
+            <p>imggrupo40 = cv.resize(imggrupo, None, fx=0.40, fy=0.40, interpolation = cv.INTER_CUBIC)</p>
+            <p>imggrupo10 = cv.resize(imggrupo, None, fx=0.10, fy=0.10, interpolation = cv.INTER_CUBIC)</p>
+            <p>cv2_imshow(imgavatares30)</p>
+            <p>cv2_imshow(imgavatares20)</p>
+            <p>cv2_imshow(imggrupo40)</p>
+            <p>cv2_imshow(imggrupo10)</p>
+          </code>
+          <b>Avatares modificados:</b>
+          <p>30% menor</p>
+          <p><div class="text-center mb-3">
+            <img src="../assets/img/avatares_30.png" alt="Avatares - 30% menor">
+          </div>
+          <p> </p>
+          <p>20% menor</p>
+          <div class="text-center mb-3">
+            <img src="../assets/img/avatares_20.png" alt="Avatares - 20% menor" min-width="100%">
+          </div>
+
+          <b>Fotos do Grupo, modificadas:</b>
+          <p>40% menor</p>
+          <div class="text-center mb-3">
+            <img src="../assets/img/grupo_40.png" alt="Grupo - 40% menor" min-width="100%">
+          </div>
+          <p>10% menor</p>
+          <div class="text-center mb-3">
+            <img src="../assets/img/grupo_10.png" alt="Grupo - 10% menor" min-width="100%">
+          </div>
+
+          <h5>Vídeos com resoluções alteradas</h5>
+          <p><b>Descrição dos procedimentos:</b></p>
+
+          <p><b>Linhas 1 - 2:</b> Importação das bibliotecas utilizadas</p>
+          <p><b>Linha 3:</b> Caminho para acessar documento</p>
+          <p><b>Linha 4:</b> Função para abrir o vídeo e deixar informações na variável</p>
+          <p><b>Linha 5:</b> Decodificação das informações obtidas na linha anterior.</p>
+          <p><b>Linha 6:</b> Modificação e Exibição em HTML. (Ver Notebook)</p>
+          <code>
+            <p>from IPython.display import HTML</p>
+            <p>from base64 import b64encode</p>
+            <p>video_path_K = "/content/drive/My Drive/Colab Notebooks/K.mp4"</p>
+            <p>mp4_k = open(video_path_K,'rb').read()</p>
+            <p>video_decodificado = "data:video/mp4;base64," + b64encode(mp4_k).decode()</p>
+            <p>from IPython.display import HTML</p>
+            <p>from base64 import b64encode</p>
+            <p>video_path_k2 = "/content/drive/My Drive/Colab Notebooks/K_pulando.mp4"</p>
+            <p>mp4_k2 = open(video_path_k2,'rb').read()</p>
+            <p>video_decodificado_2 = "data:video/mp4;base64," + b64encode(mp4_k2).decode()</p>
+          </code>
+          <p>Vídeo extra:</p>
+          <code>
+              <p>from IPython.display import HTML</p>
+              <p>from base64 import b64encode</p>
+              <p>video_path = "/content/drive/My Drive/Colab Notebooks/beijaflor.mp4"</p>
+              <p>mp4 = open(video_path,'rb').read()</p>
+              <p>video_decod = "data:video/mp4;base64," + b64encode(mp4).decode()</p>
+          </code>
+          <p><b>25% dos originais:</b></p>
+          <video width="320" height="240" controls>
+            <source src="../assets/videos/K.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <video width="320" height="240" controls>
+            <source src="../assets/videos/K_pulando.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+
+          <p><b>50% dos originais;</b></p>
+          <video width="640" height="480" controls>
+            <source src="../assets/videos/K.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          <video width="640" height="480" controls>
+            <source src="../assets/videos/K_pulando.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
         </div>
         <div class="card-page mt-3">
           <h5 class="fg-primary">Link para os notebooks .ipynb</h5>
