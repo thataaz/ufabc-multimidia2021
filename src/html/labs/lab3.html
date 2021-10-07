@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="description" content="Mobile Application HTML5 Template">
+
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+
+  <title>Codificação de Imagem por DTC e Animação</title>
+
+  <link rel="shortcut icon" href="../assets/ufabc.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="../../assets/css/maicons.css">
+
+  <link rel="stylesheet" href="../../assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../../assets/vendor/owl-carousel/css/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="../../assets/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../../assets/css/mobster.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-floating">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../../assets/ufabc.png" alt="" width="100px">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laboratórios</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item active" href="../index.html">Laboratório 1</a>
+            <a class="dropdown-item" href="../html/labs/lab2.html">Laboratório 2</a>
+            <a class="dropdown-item" href="../html/labs/lab3.html">Laboratório 3</a>
+            <a class="dropdown-item" href="../error.html">Laboratório 4</a>
+            <a class="dropdown-item" href="../error.html">Laboratório 5</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="../error.html">Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../error.html">What's New</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../error.html">Contato</a>
+        </li>
+      </ul>
+      <div class="ml-auto my-2 my-lg-0">
+        <a href="https://moodle.ufabc.edu.br/course/view.php?id=2433" class="btn btn-primary rounded-pill">Acesse o Moodle da disciplina</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="bg-light">
+
+<div class="page-hero-section bg-image hero-mini" style="background-image: url(../../assets/img/hero_mini.svg);">
+  <div class="hero-caption">
+    <div class="container fg-white h-100">
+      <div class="row justify-content-center align-items-center text-center h-100">
+        <div class="col-lg-6">
+          <h3 class="mb-4 fw-medium">Laboratório 3 – Codificação de Imagem por DTC e Animação</h3>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-dark justify-content-center bg-transparent">
+              <li class="breadcrumb-item"><a href="../index.html">Página Inicial</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Laboratório 3</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-section pt-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card-page">
+          <h5 class="fg-primary">Resumo</h5>
+          <hr>
+          <p><b>Objetivos:</b></p>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/Intro.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <p>1.   Produzir um vídeo de animação para o Grupo com Blender</p>
+          <p>2.   Efetuar conversões entre espaços de cores</p>
+          <p>3.   Comparar arquivos comprimidos JPEG</p>
+          <p>4.   Efetuar compressão de imagem com DCT</p>
+
+        </div>
+        <div class="card-page mt-3">
+          <h5 class="fg-primary">Procedimentos e resultados obtidos</h5>
+          <hr>
+          <h5>1. Animação feita com Blender</h5>
+          <audio controls style="max-width: 100%">
+            <source src="../../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+          <p>!!! Inserir imagem e procedimentos</p>
+          <p></p>
+          <h5>2. Efetuar Conversões entre espaços de cores</h5>
+          <audio controls style="max-width: 100%">
+            <source src="../../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+          <p></p>
+          <b>Código aplicado</b>
+          <p><b></b> Criação da função <i>criar_imagens</i>, para executar o mesmo processo em todas as imagens. Comentários sobre os procedimentos, no próprio código.</p>
+<pre><code><p>def criar_imagens(nome_arquivo):
+  bgr = cv.imread(f'drive/My Drive/Colab Notebooks/{nome_arquivo}') #leitura: formato bgr
+  
+  # BGR para RGB
+  b1, g1, r1 = cv.split(bgr)
+  rgb = cv.merge([r1,g1,b1])
+  plt.figure(figsize=[12, 5])
+  #Plots
+  plt.subplot(121); plt.imshow(bgr); plt.title('BGR')
+  plt.subplot(122); plt.imshow(rgb); plt.title('RBG')
+
+  #RGB, YCrCb e HSV
+  ycrcb = cv.cvtColor(bgr, cv.COLOR_BGR2YCrCb)
+  hsv = cv.cvtColor(bgr, cv.COLOR_BGR2HSV)
+  #Plots
+  plt.figure(figsize=[15,6])
+  plt.subplot(131); plt.imshow(rgb); plt.title('RGB')
+  plt.subplot(132); plt.imshow(ycrcb); plt.title('YCrCb')
+  plt.subplot(133); plt.imshow(hsv); plt.title('HSV')
+  
+  #Separação das camadas - RGB
+  imageR = rgb.copy()
+  imageR[:, :, 1:3] = 0
+  imageG = rgb.copy()
+  imageG[:, :, 0] = 0; imageG[:, :, 2] = 0
+  imageB = rgb.copy()
+  imageB[:, :, 0:2] = 0
+  #Plots
+  plt.figure(figsize=[15,6])
+  plt.subplot(131); plt.imshow(imageR); plt.title('RGB_Camada R')
+  plt.subplot(132); plt.imshow(imageG); plt.title('RGB_Camada G')
+  plt.subplot(133); plt.imshow(imageB); plt.title('RGB_Camada B')
+  y1, cr1, cb1 = cv.split(ycrcb)
+
+  #RGB, YCrCb_Y, YCrCb_Cr, YCrCb_Cb
+  imageCR = ycrcb.copy()
+  imageCR[:, :, 0] = 0
+  imageCR[:, :, 2] = 0
+  Cr = cv.cvtColor(imageCR, cv.COLOR_YCrCb2RGB)
+  imageCB = ycrcb.copy()
+  imageCB[:, :, 0] = 0
+  imageCB[:, :, 1] = 0
+  Cb = cv.cvtColor(imageCB, cv.COLOR_YCrCb2RGB)
+  #Plots
+  plt.figure(figsize=[15, 5])
+  plt.subplot(141); plt.imshow(rgb); plt.title('RGB original')
+  plt.subplot(142); plt.imshow(y1, cmap='gray'); plt.title('YCrCb_Y')
+  plt.subplot(143); plt.imshow(Cr); plt.title('YCrCb_Cr')
+  plt.subplot(144); plt.imshow(Cb); plt.title('YCrCb_Cb')</p></code></pre>
+          <p><b>Resultados - Imagem com todos os integrantes do grupo</b></p>
+          <p>BGR para RGB:</p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/bgr_rgb_grupo.jpg" width="95%">
+          </div>
+          <p>RGB, YCrCb e HSV:</p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_ycrcb_hsv_grupo.jpg" width="95%">
+          </div>
+          <p>Camadas RGB:</p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_split_grupo.jpg" width="95%">
+          </div>
+          <p>Camadas YCrCb:</p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/ycrcb_split_grupo.jpg" width="95%">
+          </div>
+
+          <p><b>Resultados análogos, por integrante:</b></p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/bgr_rgb_beatriz.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_ycrcb_hsv_beatriz.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_split_beatriz.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/ycrcb_split_beatriz.jpg" width="80%">
+          </div>
+
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/bgr_rgb_thais.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_ycrcb_hsv_thais.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_split_thais.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/ycrcb_split_thais.jpg" width="80%">
+          </div>
+
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/bgr_rgb_vanessa.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_ycrcb_hsv_vanessa.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_split_vanessa.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/ycrcb_split_vanessa.jpg" width="80%">
+          </div>
+
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/bgr_rgb_william.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_ycrcb_hsv_william.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rgb_split_william.jpg" width="80%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/ycrcb_split_william.jpg" width="80%">
+          </div>
+
+          <h5>3. Comparar arquivos comprimidos JPEG</h5>
+          <audio controls style="max-width: 100%">
+            <source src="../../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+          <p></p>
+          <b>Código aplicado</b>
+          <p><b></b> Criação da função <i>criar_menor_qualidade</i>, para executar o mesmo processo em todas as imagens. Comentários sobre os procedimentos, no próprio código.</p>
+<pre><code><p>
+def criar_menor_qualidade(nome_arquivo):
+  bgr = cv.imread(f'drive/My Drive/Colab Notebooks/{nome_arquivo}')  # formato BGR
+
+  #Salva com menor qualidade, fatores 25 e 5
+  cv.imwrite(f'25_{nome_arquivo}', bgr, [cv.IMWRITE_JPEG_QUALITY, 25])
+  cv.imwrite(f'5_{nome_arquivo}', bgr, [cv.IMWRITE_JPEG_QUALITY, 5])
+
+  #Leitura para visualização e conversão para acertar a cor
+  rgb = cv.cvtColor(bgr, cv.COLOR_BGR2RGB)
+  bgr25 = cv.imread(f'25_{nome_arquivo}'); rgb25 = cv.cvtColor(bgr25, cv.COLOR_BGR2RGB)
+  bgr05 = cv.imread(f'5_{nome_arquivo}'); rgb05 = cv.cvtColor(bgr05, cv.COLOR_BGR2RGB)
+
+  plt.figure(figsize=[15,6])
+  plt.subplot(131); plt.imshow(rgb); plt.title('RGB Original')
+  plt.subplot(132); plt.imshow(rgb25); plt.title('JPEG fator 25')
+  plt.subplot(133); plt.imshow(rgb05); plt.title('JPEG fator 05')
+
+#Aplicar função à imagem de todos os integrantes do grupo:
+criar_menor_qualidade('foto-grupo.png')
+</p></code></pre>
+          <p>Para aplicar às imagens dos integrantes:</p>
+<pre><code><p>
+integrantes = ['beatriz.jpg', 'thais.jpg', 'william.jpg', 'vanessa.jpg']
+for i in integrantes:
+  criar_menor_qualidade(i)
+</p></code></pre>
+          <p><b>Resultados - Imagem com todos os integrantes do grupo:</b></p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab3/compr_grupo.jpg" width="95%">
+          </div>
+          <p> </p>
+          <p><b>Resultados - Cada integrante em uma imagem:</b></p>
+          <div class="text-center mb-3">
+            <img src="../../assets/img/lab3/compr_beatriz.jpg" width="95%" >
+          </div>
+          <div class="text-center mb-3">
+            <img src="../../assets/img/lab3/compr_thais.jpg" width="95%" >
+          </div>          
+          <div class="text-center mb-3">
+            <img src="../../assets/img/lab3/compr_vanessa.jpg" width="95%" >
+          </div>
+          <div class="text-center mb-3">
+            <img src="../../assets/img/lab3/compr_william.jpg" width="95%" >
+          </div>
+          <p><b>Tabela de comparação entre tamanhos de arquivos:</b></p>
+          <p>!!! Preencher !!!</p>
+
+          <h5>4. Efetuar compressão de imagem DCT</h5>
+          <audio controls style="max-width: 100%">
+            <source src="../../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+          <audio controls style="max-width: 100%">
+            <source src="../../assets/audios/procedimentoslab.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+          </audio>
+          <p>Refazendo os procedimentos informados no laboratório, porém zerando duas diagonais acima da principal e
+            comparando o resultado do bloco 8x8 original e reconstruído
+          </p>
+
+          <b>Código aplicado</b>
+          <p>Aqui, foi selecionado o rosto do jogador, para o bloco 8x8.</p>
+          <div class="text-center mb-3">
+            <img src="../../assets/img/lab3/rosto-messi.jpg" width="40%" >
+          </div>         
+<pre><code><p>
+  img = cv.imread('drive/My Drive/Colab Notebooks/messi5.jpg')
+  alt, larg, cam = img.shape
+  
+  ycbcr = cv.cvtColor(img, cv.COLOR_BGR2YCrCb)
+  y, cr, cb = cv.split(ycrcb)
+  
+  rosto = y[70:130, 210:270]
+  h, w = rosto.shape
+  plt.imshow(rosto); plt.title('BGR')
+  
+  cx = round(w/2)
+  cy = round(h/2)
+  
+  # Escolhendo um pedaço da imagem "rosto"
+  bloco8x8 = rosto[cx-4:cx+4, cy-4:cy+4]
+  print("(1)"); print("Matriz 8x8: componente Y original")
+  print(bloco8x8)
+</p></code></pre>
+        <p>Na parte seguinte, há aplicação do seguinte código:</p>
+<pre><code><p>
+  bloco8x8f = np.float32(bloco8x8)/255.0  # conversão para float
+  dct8x8f = cv.dct(bloco8x8f)   # calcula a DCT
+  dct8x8 = np.int64( (dct8x8f*255.0)) # coversão para inteiro
+  
+  print("(2)"); print("Imagem Y 8x8 (formato ponto flutuante)")
+  print( np.around(bloco8x8f, decimals = 2) )
+  
+  print("(3)"); print("DCT de Y (ponto flutuante)")
+  print( np.around(dct8x8f, decimals = 2) )
+  
+  print("(4)"); print("DCT de Y (formato inteiro)")
+  print(dct8x8)
+</p></code></pre>
+        <p>Que resultou em:</p>
+<pre><code><p>
+(1)
+Matriz 8x8: componente Y original
+[[ 33  30  66  87 174 170 176  81]
+  [ 72  58  89 142 152 163  98 173]
+  [ 43  73 139 129 161 119 152 141]
+  [106 109 142 153 101 144 136 166]
+  [135 126 112 138 154 138 164 183]
+  [116 135 155 141 167 175 194 206]
+  [143 151 162 167 159 179 197 197]
+  [141 147 151 155 177 178 182 188]]
+(2)
+Imagem Y 8x8 (formato ponto flutuante)
+[[0.13 0.12 0.26 0.34 0.68 0.67 0.69 0.32]
+  [0.28 0.23 0.35 0.56 0.6  0.64 0.38 0.68]
+  [0.17 0.29 0.55 0.51 0.63 0.47 0.6  0.55]
+  [0.42 0.43 0.56 0.6  0.4  0.56 0.53 0.65]
+  [0.53 0.49 0.44 0.54 0.6  0.54 0.64 0.72]
+  [0.45 0.53 0.61 0.55 0.65 0.69 0.76 0.81]
+  [0.56 0.59 0.64 0.65 0.62 0.7  0.77 0.77]
+  [0.55 0.58 0.59 0.61 0.69 0.7  0.71 0.74]]
+(3)
+DCT de Y (ponto flutuante)
+[[ 4.36 -0.76 -0.19 -0.03  0.03 -0.    0.04  0.05]
+  [-0.72 -0.2  -0.29  0.11  0.04  0.01  0.04  0.04]
+  [-0.03 -0.14 -0.16  0.22 -0.04 -0.02 -0.02  0.05]
+  [ 0.03 -0.12  0.04  0.18 -0.05  0.   -0.06  0.04]
+  [-0.1   0.05  0.04  0.13 -0.03  0.05 -0.05 -0.  ]
+  [-0.01  0.01 -0.04 -0.02 -0.17  0.12 -0.03  0.04]
+  [-0.05 -0.1  -0.1   0.01 -0.13 -0.   -0.08  0.18]
+  [-0.04 -0.01 -0.04  0.05 -0.01  0.01 -0.13  0.13]]
+(4)
+DCT de Y (formato inteiro)
+[[1111 -192  -48   -7    8    0    9   13]
+  [-182  -51  -74   28    9    2    9   10]
+  [  -7  -35  -40   56  -11   -4   -4   13]
+  [   6  -29   10   45  -11    0  -15   10]
+  [ -25   13    9   34   -8   13  -13    0]
+  [  -3    2  -10   -5  -43   29   -7    9]
+  [ -13  -24  -25    3  -32    0  -21   47]
+  [  -9   -3   -9   12   -1    2  -32   32]]
+</p></code></pre>
+<p>Aplicando o código abaixo, para zerar as linhas indicadas:</p>
+<pre><code><p>
+dct8x8fz = dct8x8f.copy()
+dct8x8fz[0,5:8] = 0 #linha 0, elementos da linha 5-8
+dct8x8fz[1,4:8] = 0
+dct8x8fz[2,3:8] = 0
+dct8x8fz[3,2:8] = 0
+dct8x8fz[4,1:8] = 0
+dct8x8fz[5,0:8] = 0 
+dct8x8fz[6,0:8] = 0
+dct8x8fz[7,0:8] = 0
+
+print( np.around(dct8x8fz, decimals = 2))
+
+bloco8x8recz = cv.idct(dct8x8fz)
+
+plt.subplot(121); plt.imshow(bloco8x8,'gray'); plt.title('Bloco Original')
+plt.subplot(122); plt.imshow(bloco8x8recz,'gray'); plt.title('Bloco Reconstruído com Zeros')
+</p></code></pre>
+<p>Obtemos:</p>
+<pre><code><p>
+  [[ 4.36 -0.76 -0.19 -0.03  0.03  0.    0.    0.  ]
+  [-0.72 -0.2  -0.29  0.11  0.    0.    0.    0.  ]
+  [-0.03 -0.14 -0.16  0.    0.    0.    0.    0.  ]
+  [ 0.03 -0.12  0.    0.    0.    0.    0.    0.  ]
+  [-0.1   0.    0.    0.    0.    0.    0.    0.  ]
+  [ 0.    0.    0.    0.    0.    0.    0.    0.  ]
+  [ 0.    0.    0.    0.    0.    0.    0.    0.  ]
+  [ 0.    0.    0.    0.    0.    0.    0.    0.  ]]
+ Text(0.5, 1.0, 'Bloco Reconstruído com Zeros')
+</p></code></pre>
+        <div class="text-center mb-3">
+          <img src="../../assets/img/lab3/reconstr-messi.jpg" width="40%" >
+        </div>
+        <p>!!!! Comentar resultados!</p>
+
+        </div>
+        <div class="card-page mt-3">
+          <h5 class="fg-primary">Link para o Notebooks .ipynb</h5>
+          <p> Para mais informações, acesse o Google Colab:</p>
+          <hr>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 justify-content-center align-items-center mt-5">
+            <div class="p-3">
+              <div class="img-place client-img">
+                <div class="ml-auto my-2 my-lg-0">
+                  <a href="https://colab.research.google.com/drive/1O_gUXBH9VAZiS4twRHIalKjA1cFvGLNe?authuser=1#scrollTo=FrZtdiGSz_lE" class="btn btn-primary rounded-pill">Acesse o Notebook</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main> <!-- .bg-light -->
+
+
+<div class="page-footer-section bg-dark fg-white">
+  <div class="container mb-5">
+    <div class="row justify-content-center text-center wow fadeInUp">
+      <div class="col-lg-8">
+        <div class="text-center mb-3">
+          <img src="https://media.giphy.com/media/KCdXOVBvvEqeWzFNf8/giphy.gif?cid=ecf05e470fqw75zdyxhgpfntl61roz5v54xmquhl3asd9jkv&rid=giphy.gif&ct=g" alt="" height="300px">
+        </div>
+        <h3 class="caption">
+          Capturar uma imagem é libertar vidas, lembranças e saudades!
+          <br>
+            <i></b>Rosival Evangelista</b></i>          
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 py-2">
+        <img src="../assets/favicon-light.png" alt="" width="40">
+        <!-- Please don't remove or modify the credits below -->
+        <p class="d-inline-block ml-2">Copyright &copy; <a href="https://www.macodeid.com/" class="fg-white fw-medium">MACode ID</a>. All rights reserved</p>
+      </div>
+      <div class="col-12 col-md-6 py-2">
+        <ul class="nav justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link">Terms of Use</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Privacy Policy</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/jquery-3.5.1.min.js"></script>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../assets/vendor/wow/wow.min.js"></script>
+
+<script src="../assets/js/mobster.js"></script>
+
+</body>
+</html>
