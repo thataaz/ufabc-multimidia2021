@@ -455,14 +455,87 @@ plt.savefig(f'drive/My Drive/Colab Notebooks/L4_I_{nome_arq}.jpg')
           </audio>
           <p></p>
           <p>1.   Acrescentar também a foto-montagem do grupo todo, mas codificar esta foto-montagem em um nível com DWT também as componentes Cr e Cb (efetuamos aqui apenas para a componente Y)</p>
-          <p>2.   Fazer uma tabela com as taxas de compressão obtidas e a PSNR de cada uma das fotos utilizadas</p>
 <pre><code><p>
-img = mpimg.imread('drive/My Drive/Colab Notebooks/grupo.jpg')
-</p></code></pre>
+  import cv2 as cv
+
+  J_nome_arq = 'grp'
+  J_img = cv.imread(f'drive/My Drive/Colab Notebooks/{J_nome_arq}.jpg')
+  J_ycrcb = cv.cvtColor(J_img, cv.COLOR_BGR2YCrCb)
+  
+  y1, cr1, cb1 = cv.split(J_ycrcb)
+  imageCR = J_ycrcb.copy()
+  imageCR[:, :, 0] = 0
+  imageCR[:, :, 2] = 0
+  Cr = cv.cvtColor(imageCR, cv.COLOR_YCrCb2RGB)
+  
+  imageCB = J_ycrcb.copy()
+  imageCB[:, :, 0] = 0
+  imageCB[:, :, 1] = 0
+  Cb = cv.cvtColor(imageCB, cv.COLOR_YCrCb2RGB)
+  
+  cb_C = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
+  cb_imgr2 = pywt.waverec2(cb_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
+  
+  cr_C = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
+  cr_imgr2 = pywt.waverec2(cr_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
+  
+  # Para extrair os coeficientes de cada nível
+  cb_cA2 = cb_C[0]  # Coeficientes de Aproximação nível 2
+  (cb_cH1, cb_cV1, cb_cD1) = cb_C[-1] # Coeficientes de Detalhes nível 1
+  (cb_cH2, cb_cV2, cb_cD2) = cb_C[-2] # Coeficientes de Detalhes nível 2
+  cr_cA2 = cr_C[0]  # Coeficientes de Aproximação nível 2
+  (cr_cH1, cr_cV1, cr_cD1) = cr_C[-1] # Coeficientes de Detalhes nível 1
+  (cr_cH2, cr_cV2, cr_cD2) = cr_C[-2] # Coeficientes de Detalhes nível 2
+  
+  # Plot Original e Reconstrução
+  plt.figure(figsize=(10,20))
+  plt.subplot(1,2,1); plt.imshow(Cb,'gray'); plt.title('Imagem Original')
+  plt.subplot(1,2,2); plt.imshow(cb_imgr2,'gray'); plt.title('Imagem Reconstruída')
+  plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cb_{J_nome_arq}.jpg')
+  
+  plt.figure(figsize=(10,20))
+  plt.subplot(1,2,1); plt.imshow(Cr,'gray'); plt.title('Imagem Original')
+  plt.subplot(1,2,2); plt.imshow(cr_imgr2,'gray'); plt.title('Imagem Reconstruída')
+  plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cb_{J_nome_arq}.jpg')
+  
+  #G
+  #Para Cb
+  # obtenha aproximação de NÍVEL 1 e converte para inteiro
+  cb_C1 = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
+  cb_CA1_ = 255 * cb_C1[0] / np.abs(cb_C1[0]).max()
+  cb_CA1_ = cb_CA1_.astype(int)
+  
+  # aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
+  cb_CA2_ = 255 * cb_cA2 / np.abs(cb_cA2).max()
+  cb_CA2_ = cb_CA2_.astype(int)
+  
+  # Salva no drive
+  print(cb_CA1_.shape)
+  # cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N1_CB.bmp', cb_CA1_) # Aproximação Nível 1 só Cb
+  # cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N2_CB.bmp', cb_CA2_) # Aproximação Nível 2 só Cb
+  
+  #Para Cr
+  # obtenha aproximação de NÍVEL 1 e converte para inteiro
+  cr_C1 = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
+  cr_CA1_ = 255 * cr_C1[0] / np.abs(cr_C1[0]).max()
+  cr_CA1_ = cr_CA1_.astype(int)
+  
+  # aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
+  cr_CA2_ = 255 * cr_cA2 / np.abs(cr_cA2).max()
+  cr_CA2_ = cr_CA2_.astype(int)
+  
+  # Salva no drive
+  #cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N1_CR.bmp', cr_CA1_) # Aproximação Nível 1 só Cr
+  #cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N2_CR.bmp', cr_CA2_) # Aproximação Nível 2 só Cr</p></code></pre>
           <p><b>Resultados - Imagem com todos os integrantes do grupo</b></p>
           <p><div class="text-center mb-3">
-            <img src="../../assets/img/lab4/L4_C_grupo.jpg" width="70%">
+            <img src="../../assets/img/lab4/L4_J1.jpg" width="70%">
           </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab4/L4_J2.jpg" width="70%">
+          </div>
+          <p>2.   Fazer uma tabela com as taxas de compressão obtidas e a PSNR de cada uma das fotos utilizadas</p>
+
         </div>
         <div class="card-page mt-3">
           <h5 class="fg-primary">Link para o Notebook .ipynb</h5>
