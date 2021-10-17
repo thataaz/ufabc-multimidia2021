@@ -387,8 +387,15 @@ CA2_ = CA2_.astype(int)
 # Salva no drive
 cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_N1_Y.bmp', CA1_) # Aproximação Nível 1 só Y
 cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_N2_Y.bmp', CA2_) # Aproximação Nível 2 só Y</p></code></pre>
-          <p><b>Resultados:</b></p>
-          <p>!!! Calcular taxa de compressão!</p>
+          <p><b>Tabela de comparação entre tamanhos de arquivos:</b></p>
+          <pre>
+
+Nome            Original (grp.jpg)   grp_DWT_N1_Y.bmp  grp_DWT_N1_Y.bmp
+________________________________________________________________________
+Tamanho         95 KB                81 KB             21 KB
+% de original:  100%                 85,26 %           22,10 %
+
+           </pre>
 
           <h5>H. Gravando o Arquivo Codificado DWT/IDWT nível 1 Colorido, calcular a taxa de compressão com o original</h5>
           <audio controls style="max-width: 100%">
@@ -408,10 +415,17 @@ imgrec1_ = ( 255 * imgrec1_ / np.abs(imgrec1_).max() ).astype(int)
 
 # Salva no drive
 cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_N1_colorida.bmp', imgrec1_)
-# Gravando Aproximação Nível 1 Colorida</p></code></pre>
+</p></code></pre>
           <p><b>Resultados: </b></p>
-          <p>!!! Calcular taxa de compressão!</p>
+          <p><b>Tabela de comparação entre tamanhos de arquivos:</b></p>
+          <pre>
 
+Nome            Original (grp.jpg)   grp_DWT_N1_colorida.bmp
+__________________________________________________________
+Tamanho         95 KB                239 KB        
+% de original:  100%                 251 % 
+
+           </pre>
           <h5>I. Reconstrução da Imagem colorida e Cálculo da MSE de cada plano de cor e da PSNR total</h5>
           <audio controls style="max-width: 100%">
             <source src="../../assets/audios/lab4/ptI.mp3" type="audio/mp3">
@@ -455,84 +469,169 @@ plt.savefig(f'drive/My Drive/Colab Notebooks/L4_I_{nome_arq}.jpg')
           </audio>
           <p></p>
           <p>1.   Acrescentar também a foto-montagem do grupo todo, mas codificar esta foto-montagem em um nível com DWT também as componentes Cr e Cb (efetuamos aqui apenas para a componente Y)</p>
+          
+          <p>Primeiramente, fazemos a importação da imagem utilizada, separação de camadas Y Cr e Cb</p>
 <pre><code><p>
-  import cv2 as cv
+img = mpimg.imread('drive/My Drive/Colab Notebooks/grp.jpg')
+nome_arq = 'grp'
+J_nome_arq = 'grp'
+J_img = cv.imread(f'drive/My Drive/Colab Notebooks/{J_nome_arq}.jpg')
+J_ycrcb = cv.cvtColor(J_img, cv.COLOR_BGR2YCrCb)
 
-  J_nome_arq = 'grp'
-  J_img = cv.imread(f'drive/My Drive/Colab Notebooks/{J_nome_arq}.jpg')
-  J_ycrcb = cv.cvtColor(J_img, cv.COLOR_BGR2YCrCb)
-  
-  y1, cr1, cb1 = cv.split(J_ycrcb)
-  imageCR = J_ycrcb.copy()
-  imageCR[:, :, 0] = 0
-  imageCR[:, :, 2] = 0
-  Cr = cv.cvtColor(imageCR, cv.COLOR_YCrCb2RGB)
-  
-  imageCB = J_ycrcb.copy()
-  imageCB[:, :, 0] = 0
-  imageCB[:, :, 1] = 0
-  Cb = cv.cvtColor(imageCB, cv.COLOR_YCrCb2RGB)
-  
-  cb_C = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
-  cb_imgr2 = pywt.waverec2(cb_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
-  
-  cr_C = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
-  cr_imgr2 = pywt.waverec2(cr_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
-  
-  # Para extrair os coeficientes de cada nível
-  cb_cA2 = cb_C[0]  # Coeficientes de Aproximação nível 2
-  (cb_cH1, cb_cV1, cb_cD1) = cb_C[-1] # Coeficientes de Detalhes nível 1
-  (cb_cH2, cb_cV2, cb_cD2) = cb_C[-2] # Coeficientes de Detalhes nível 2
-  cr_cA2 = cr_C[0]  # Coeficientes de Aproximação nível 2
-  (cr_cH1, cr_cV1, cr_cD1) = cr_C[-1] # Coeficientes de Detalhes nível 1
-  (cr_cH2, cr_cV2, cr_cD2) = cr_C[-2] # Coeficientes de Detalhes nível 2
-  
-  # Plot Original e Reconstrução
-  plt.figure(figsize=(10,20))
-  plt.subplot(1,2,1); plt.imshow(Cb,'gray'); plt.title('Imagem Original')
-  plt.subplot(1,2,2); plt.imshow(cb_imgr2,'gray'); plt.title('Imagem Reconstruída')
-  plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cb_{J_nome_arq}.jpg')
-  
-  plt.figure(figsize=(10,20))
-  plt.subplot(1,2,1); plt.imshow(Cr,'gray'); plt.title('Imagem Original')
-  plt.subplot(1,2,2); plt.imshow(cr_imgr2,'gray'); plt.title('Imagem Reconstruída')
-  plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cb_{J_nome_arq}.jpg')
-  
-  #G
-  #Para Cb
-  # obtenha aproximação de NÍVEL 1 e converte para inteiro
-  cb_C1 = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
-  cb_CA1_ = 255 * cb_C1[0] / np.abs(cb_C1[0]).max()
-  cb_CA1_ = cb_CA1_.astype(int)
-  
-  # aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
-  cb_CA2_ = 255 * cb_cA2 / np.abs(cb_cA2).max()
-  cb_CA2_ = cb_CA2_.astype(int)
-  
-  # Salva no drive
-  print(cb_CA1_.shape)
-  # cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N1_CB.bmp', cb_CA1_) # Aproximação Nível 1 só Cb
-  # cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N2_CB.bmp', cb_CA2_) # Aproximação Nível 2 só Cb
-  
-  #Para Cr
-  # obtenha aproximação de NÍVEL 1 e converte para inteiro
-  cr_C1 = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
-  cr_CA1_ = 255 * cr_C1[0] / np.abs(cr_C1[0]).max()
-  cr_CA1_ = cr_CA1_.astype(int)
-  
-  # aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
-  cr_CA2_ = 255 * cr_cA2 / np.abs(cr_cA2).max()
-  cr_CA2_ = cr_CA2_.astype(int)
-  
-  # Salva no drive
-  #cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N1_CR.bmp', cr_CA1_) # Aproximação Nível 1 só Cr
-  #cv.imwrite(f'drive/My Drive/Colab Notebooks/{J_nome_arq}_DWT_N2_CR.bmp', cr_CA2_) # Aproximação Nível 2 só Cr</p></code></pre>
+#RGB em YCrCb e separando as camadas
+img_ycrcb = cv.cvtColor(J_img, cv.COLOR_RGB2YCrCb)
+print(img_ycrcb.shape)
+y1, cr, cb = cv.split(img_ycrcb)</p></code></pre>
+          
+          <p>Para componentes Cb</p>
+<pre><code><p>
+#DWT e plot para Cb
+coefs2 = pywt.dwt2(cb,'haar', mode='periodization')  #1 nível de DWT
+(cA, (cH, cV, cD)) = coefs2 #Separando os coeficientes
+imgr = pywt.idwt2(coefs2, 'haar', mode = 'periodization')  #1 nível de IDWT
+
+#Prints - Cb
+plt.figure(figsize=(7,10))
+plt.subplot(2,2,1)
+plt.imshow(cA, 'GnBu_r'); plt.title("CA - Aproximação (Cb)")
+plt.subplot(2,2,2)
+plt.imshow(cV, 'GnBu_r'); plt.title("CV - Bordas Verticais (Cb)")
+plt.subplot(2,2,3)
+plt.imshow(cH, 'GnBu_r'); plt.title("CH - Bordas Horizontais (Cb)")
+plt.subplot(2,2,4)
+plt.imshow(cD, 'GnBu_r'); plt.title("CD - Bordas Diagonais (Cb)")
+
+A, L, Camadas = img.shape
+dif = cb - imgr
+print(f'{cb.shape}, {imgr.shape}')
+MSE_cb = np.sum(np.matmul(dif,np.transpose(dif)))/(A*L)
+print("MSE_cb = {:.2e}".format(MSE_cb))
+PSNR_cb = 20*np.log10(255) - 10*np.log10(MSE_cb)
+print("PSNR_cb = {:.2f} dB".format(PSNR_cb))
+plt.figure(figsize=(10,20))
+resultado = "Imagem Reconstruída de cb com PSNR = " + str(np.uint8(PSNR_cb)) + ' dB'
+plt.subplot(1,2,1); plt.imshow(cr,'gray'); plt.title("Imagem Original Cr")
+plt.subplot(1,2,2); plt.imshow(imgr,'gray'); plt.title(resultado)
+cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_Cb.bmp', cb)
+
+y1, cr1, cb1 = cv.split(J_ycrcb)
+imageCR = J_ycrcb.copy()
+imageCR[:, :, 0] = 0
+imageCR[:, :, 2] = 0
+Cr = cv.cvtColor(imageCR, cv.COLOR_YCrCb2RGB)
+
+imageCB = J_ycrcb.copy()
+imageCB[:, :, 0] = 0
+imageCB[:, :, 1] = 0
+Cb = cv.cvtColor(imageCB, cv.COLOR_YCrCb2RGB)
+
+cb_C = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
+cb_imgr2 = pywt.waverec2(cb_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
+
+# Para extrair os coeficientes de cada nível
+cb_cA2 = cb_C[0]  # Coeficientes de Aproximação nível 2
+(cb_cH1, cb_cV1, cb_cD1) = cb_C[-1] # Coeficientes de Detalhes nível 1
+(cb_cH2, cb_cV2, cb_cD2) = cb_C[-2] # Coeficientes de Detalhes nível 2
+
+# Plot Original e Reconstrução
+plt.figure(figsize=(10,20))
+plt.subplot(1,2,1); plt.imshow(Cb,'gray'); plt.title('Imagem Original')
+plt.subplot(1,2,2); plt.imshow(cb_imgr2,'gray'); plt.title('Imagem Reconstruída')
+plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cb_{nome_arq}.jpg')
+
+# obtenha aproximação de NÍVEL 1 e converte para inteiro
+cb_C1 = pywt.wavedec2(Cb,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
+cb_CA1_ = 255 * cb_C1[0] / np.abs(cb_C1[0]).max()
+cb_CA1_ = cb_CA1_.astype(int)
+
+# aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
+cb_CA2_ = 255 * cb_cA2 / np.abs(cb_cA2).max()
+cb_CA2_ = cb_CA2_.astype(int)
+
+# Salva no drive
+print(cb_CA1_.shape)
+v.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_Cb_2.bmp', cb_CA1_) # Aproximação Nível 1 só Cb
+</p></code></pre>
           <p><b>Resultados - Imagem com todos os integrantes do grupo</b></p>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab4/L4_J.jpg" width="70%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab4/L4_J0.jpg" width="70%">
+          </div>
           <p><div class="text-center mb-3">
             <img src="../../assets/img/lab4/L4_J1.jpg" width="70%">
           </div>
+          <p><b>Para componentes Cr</b></p>
+<pre><code><p>
+#DWT e plot para Cr
+coefs2 = pywt.dwt2(cr,'haar', mode='periodization')  #1 nível de DWT
+(cA, (cH, cV, cD)) = coefs2 #Separando os coeficientes
+imgr = pywt.idwt2(coefs2, 'haar', mode = 'periodization')  #1 nível de IDWT
+
+#Prints - Cr
+plt.figure(figsize=(7,10))
+plt.subplot(2,2,1)
+plt.imshow(cA); plt.title("CA - Aproximação (Cr)")
+plt.subplot(2,2,2)
+plt.imshow(cV); plt.title("CV - Bordas Verticais (Cr)")
+plt.subplot(2,2,3)
+plt.imshow(cH); plt.title("CH - Bordas Horizontais (Cr)")
+plt.subplot(2,2,4)
+plt.imshow(cD); plt.title("CD - Bordas Diagonais (Cr)")
+
+A, L, Camadas = img.shape
+dif = cr - imgr
+print(f'{cr.shape}, {imgr.shape}')
+MSE_cr = np.sum(np.matmul(dif,np.transpose(dif)))/(A*L)
+print("MSE_cb = {:.2e}".format(MSE_cr))
+PSNR_cr = 20*np.log10(255) - 10*np.log10(MSE_cr)
+print("PSNR_cb = {:.2f} dB".format(PSNR_cr))
+plt.figure(figsize=(10,20))
+resultado = "Imagem Reconstruída de cr com PSNR = " + str(np.uint8(PSNR_cr)) + ' dB'
+plt.subplot(1,2,1); plt.imshow(cr,'gray'); plt.title("Imagem Original Cr")
+plt.subplot(1,2,2); plt.imshow(imgr,'gray'); plt.title(resultado)
+cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_CR.bmp', cr)
+
+imageCR = J_ycrcb.copy()
+imageCR[:, :, 0] = 0
+imageCR[:, :, 2] = 0
+Cr = cv.cvtColor(imageCR, cv.COLOR_YCrCb2RGB)
+
+cr_C = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=2) # Dois níveis de decomposição DWT
+cr_imgr2 = pywt.waverec2(cr_C, 'haar', mode = 'symmetric') # Dois níveis de IDWT
+
+cr_cA2 = cr_C[0]  # Coeficientes de Aproximação nível 2
+(cr_cH1, cr_cV1, cr_cD1) = cr_C[-1] # Coeficientes de Detalhes nível 1
+(cr_cH2, cr_cV2, cr_cD2) = cr_C[-2] # Coeficientes de Detalhes nível 2
+
+plt.figure(figsize=(10,20))
+plt.subplot(1,2,1); plt.imshow(Cr,'gray'); plt.title('Imagem Original')
+plt.subplot(1,2,2); plt.imshow(cr_imgr2,'gray'); plt.title('Imagem Reconstruída')
+plt.savefig(f'drive/My Drive/Colab Notebooks/L4_D2_cr_{J_nome_arq}.jpg')
+
+#Para Cr
+# obtenha aproximação de NÍVEL 1 e converte para inteiro
+cr_C1 = pywt.wavedec2(Cr,'haar', mode = 'symmetric', level=1) # Um nível de decomposição DWT
+cr_CA1_ = 255 * cr_C1[0] / np.abs(cr_C1[0]).max()
+cr_CA1_ = cr_CA1_.astype(int)
+
+# aproximação de NÍVEL 2 - ja´obtido no item (D) e converte para inteiro
+cr_CA2_ = 255 * cr_cA2 / np.abs(cr_cA2).max()
+cr_CA2_ = cr_CA2_.astype(int)
+
+# Salva no drive
+#print(cr_CA1_.shape)
+#v.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_Cr_2.bmp', cr_CA1_) # Aproximação Nível 1 só Cr</p></code></pre>          
+          <p><b>Resultados - Imagem com todos os integrantes do grupo</b></p>
           <p><div class="text-center mb-3">
             <img src="../../assets/img/lab4/L4_J2.jpg" width="70%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab4/L4_J3.jpg" width="70%">
+          </div>
+          <p><div class="text-center mb-3">
+            <img src="../../assets/img/lab4/L4_J4.jpg" width="70%">
           </div>
           <p>2.   Fazer uma tabela com as taxas de compressão obtidas e a PSNR de cada uma das fotos utilizadas</p>
 
