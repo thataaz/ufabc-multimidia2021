@@ -390,7 +390,7 @@ cv.imwrite(f'drive/My Drive/Colab Notebooks/{nome_arq}_DWT_N2_Y.bmp', CA2_) # Ap
           <p><b>Tabela de comparação entre tamanhos de arquivos:</b></p>
           <pre>
 
-Nome            Original (grp.jpg)   grp_DWT_N1_Y.bmp  grp_DWT_N1_Y.bmp
+Nome            Original (grp.jpg)   grp_DWT_N1_Y.bmp  grp_DWT_N2_Y.bmp
 ________________________________________________________________________
 Tamanho         95 KB                81 KB             21 KB
 % de original:  100%                 85,26 %           22,10 %
@@ -633,7 +633,17 @@ cr_CA2_ = cr_CA2_.astype(int)
           <p><div class="text-center mb-3">
             <img src="../../assets/img/lab4/L4_J4.jpg" width="70%">
           </div>
-          <p>2.   Fazer uma tabela com as taxas de compressão obtidas e a PSNR de cada uma das fotos utilizadas</p>
+          <p><b>Tabela comparativa</b></p>
+          <pre>
+Arquivo original (.jpg): 95  KB
+___________________________________________________
+Tipo              PSNR      Tamanho arquivo (.bmp)
+___________________________________________________
+Y                 33 dB     112 KB         
+Cb                32 dB     318 KB
+Cr                32 dB     318 KB
+Total (Colorida)  29 dB     229 KB
+</pre>
 
         </div>
         <div class="card-page mt-3">
