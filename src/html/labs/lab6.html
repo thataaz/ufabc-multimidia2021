@@ -123,6 +123,12 @@
             </ul>
           <p class="text-center mb-3" style="color:deeppink"><b>Arquivos da Beatriz</b></p>
           <p>Dígitos pronunciados separadamente</p>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab6/digitos.wav" type="wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
           <p>Números gerais</p>
           <p>Texto Lido</p>
           <p>Poesia declamada</p>
@@ -174,8 +180,8 @@ audio4 = '/content/drive/My Drive/Colab Notebooks/Dia.wav'
 files = [audio2, audio3, audio4]
 grupo = ['Beatriz', 'Thaís', 'Vanessa', 'William']
 integrante_grupo = grupo[0]
-for audio in files:
 
+for audio in files:
   print(audio)
   v , sr = librosa.load(audio)
   print(type(v), type(sr))
@@ -222,31 +228,31 @@ for audio in files:
 </pre></p>
                     <p>Beatriz</p>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
                     </div>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
                     </div>
                     <p>Thaís</p>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
                     </div>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
                     </div>
                     <p>Vanessa</p>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
                     </div>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
                     </div>
                     <p>William</p>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
                     </div>
                     <div class="text-center mb-3">
-                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="40%">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
                     </div>
                   
                     <h5 style="color:deeppink; font-size:18px; margin-top: 30px;">2.2 Obtendo uma Janela de Hammin</h5>
