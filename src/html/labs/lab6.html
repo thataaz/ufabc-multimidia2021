@@ -374,7 +374,18 @@ for audio in files:
 
                   
                     <h5 style="color:deeppink; font-size:18px; margin-top: 30px;">4.2 Agora com os seus arquivos</h5>
+                    <p>O código para a geração dos espectrogramas, para cada integrante do grupo e seus respectivos arquivos, está abaixo (também presente no Notebook, no final da página)</p>
+<pre>
+for audio in files:
+  v , sr = librosa.load(audio)
 
+  plt.figure(figsize=(12, 8))
+  D = librosa.amplitude_to_db(np.abs(librosa.stft(v)), ref=np.max)
+  fig, ax = plt.subplots(figsize=(15, 10))
+  librosa.display.specshow(D, x_axis='time',y_axis='linear')
+  plt.colorbar(format='%+2.0f dB')
+  plt.title(f'Potência e Espectrograma Linear na Frequência - {integrante_grupo} - {audio}')
+</pre>
                   </div>
                 </div>
               </div>
