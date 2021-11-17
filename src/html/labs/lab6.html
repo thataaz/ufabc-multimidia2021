@@ -165,23 +165,24 @@
                   <div class="ml-auto my-2 my-lg-0">
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab6/parte2-1.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab6/parte2-1.mp3" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
                     <h5 style="color:deeppink; font-size:18px; margin-top: 30px;">2.1 Definição dos Parâmetros da Análise</h5>
-                    <p><b>Dígitos - Gráficos dos arquivos de áudio e Energia da voz</b></p>
                     <p>Modificando o código abaixo para cada integrante do grupo, com seus respectivos arquivos:</p>
                     <p><pre>
-audio2 = '/content/drive/My Drive/Colab Notebooks/digitos.wav'
-audio3 = '/content/drive/My Drive/Colab Notebooks/texto.wav'
-audio4 = '/content/drive/My Drive/Colab Notebooks/Dia.wav'
-
-files = [audio2, audio3, audio4]
 grupo = ['Beatriz', 'Thaís', 'Vanessa', 'William']
 integrante_grupo = grupo[0]
 
+audio2 = f'/content/drive/My Drive/Colab Notebooks/digitos_{integrante_grupo}.wav'
+audio3 = f'/content/drive/My Drive/Colab Notebooks/texto_{integrante_grupo}.wav'
+audio4 = f'/content/drive/My Drive/Colab Notebooks/poesia_{integrante_grupo}.wav'
+
+files = [audio2, audio3, audio4]
+grupo = ['Beatriz', 'Thaís', 'Vanessa', 'William']
 for audio in files:
+
   print(audio)
   v , sr = librosa.load(audio)
   print(type(v), type(sr))
@@ -201,6 +202,7 @@ for audio in files:
   Ts = 0.04   # Tempo de duração do segmento em segundos
   Nj = int(Ts*fa) # Número de pontos da Janela
   print('Tamanho do Segmento', Nj)
+
 
   Nseg = int(len(v)/Nj)
   Nover = int(Nj*0.5)
@@ -226,12 +228,73 @@ for audio in files:
   plt.title(f'Energia da Voz ({integrante_grupo}) arquivo:{audio}')
   plt.ylabel('Energia[db]'); plt.xlabel('Segmento')
 </pre></p>
+                    <p><b>Dígitos - Gráficos dos arquivos de áudio e Energia da voz</b></p>
                     <p>Beatriz</p>
                     <div class="text-center mb-3">
                     <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
                     </div>
                     <div class="text-center mb-3">
                     <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>Thaís</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>Vanessa</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>William</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>--------------------</p>
+                    <p><b>Texto Lido - Gráficos dos arquivos de áudio e Energia da voz</b></p>
+                    <p>Beatriz</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/texto_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/textos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>Thaís</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>Vanessa</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>William</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/digitos2_Beatriz.png" width="100%">
+                    </div>
+                    <p>--------------------</p>
+                    <p><b>Poesia - Gráficos dos arquivos de áudio e Energia da voz</b></p>
+                    <p>Beatriz</p>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/poesia_Beatriz.png" width="100%">
+                    </div>
+                    <div class="text-center mb-3">
+                    <img src="../../assets/img/lab6/poesia2_Beatriz.png" width="100%">
                     </div>
                     <p>Thaís</p>
                     <div class="text-center mb-3">
