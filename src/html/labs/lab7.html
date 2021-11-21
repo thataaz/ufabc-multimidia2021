@@ -111,14 +111,13 @@
           <hr>
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab6/parte1.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab7/part1.mp3" type="audio/mp3">
             Your browser does not support the audio element.
             </audio>
           </div>
           <p>Usando um programa de áudio cada integrante do grupo gravou os arquivos com as seguintes instruções. </p>
           <ul>
             <li> Dígitos (pronunciados separadamente) </li>
-            <li> Números Gerais (p.ex. dia/mês/ano de nascimento, nº celular, RA)</li>
             <li> Texto lido </li>
             <li> Poesia declamada </li>
             </ul>
@@ -256,69 +255,12 @@
                   <div class="ml-auto my-2 my-lg-0">
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab6/parte2-1.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab7/part2.mp3" type="audio/mp3">
             Your browser does not support the audio element.
             </audio>
           </div>
                     <h5 style="color:deeppink; font-size:18px; margin-top: 30px;">2.1 Definição dos Parâmetros da Análise</h5>
                     <p>Modificando o código abaixo para cada integrante do grupo, com seus respectivos arquivos:</p>
-                    <p><pre>
-grupo = ['Beatriz', 'Thaís', 'Vanessa', 'William']
-integrante_grupo = grupo[0]
-
-audio2 = f'/content/drive/My Drive/Colab Notebooks/digitos_{integrante_grupo}.wav'
-audio3 = f'/content/drive/My Drive/Colab Notebooks/texto_{integrante_grupo}.wav'
-audio4 = f'/content/drive/My Drive/Colab Notebooks/poesia_{integrante_grupo}.wav'
-
-files = [audio2, audio3, audio4]
-grupo = ['Beatriz', 'Thaís', 'Vanessa', 'William']
-for audio in files:
-
-  print(audio)
-  v , sr = librosa.load(audio)
-  print(type(v), type(sr))
-  print(v.shape, sr)
-  # Player será aberto!
-  IPython.display.Audio(data=v, rate=sr)
-
-  plt.figure()
-  fig, ax = plt.subplots(figsize=(15, 5))
-  librosa.display.waveplot(v, sr=sr)
-  plt.title(f'Arquivo de áudio: {integrante_grupo}, {audio}')
-
-  #Parâmetros para análise
-  print('Frequência de Amostragem', sr)
-  fa = sr
-
-  Ts = 0.04   # Tempo de duração do segmento em segundos
-  Nj = int(Ts*fa) # Número de pontos da Janela
-  print('Tamanho do Segmento', Nj)
-
-
-  Nseg = int(len(v)/Nj)
-  Nover = int(Nj*0.5)
-  print('Número de Segmentos no Arquivo', Nseg, '. Pontos Soprepostos', Nover)
-
-  #Janela de Hamming
-  hm = signal.get_window('hamming', Nj)
-
-  #Contorno de energia
-  Nover = int(Nj*0.5)
-  Nseg = int(len(v)/Nj)
-  E = []
-  for l in range(1, Nseg):
-      xjan = v[(l-1)*Nj+Nover:l*Nj+Nover]*hm
-      x2 = list(np.array(xjan**2))
-      aux = sum(x2)/Nj
-      E.append(aux)
-  E = 10*np.log10(E)
-  Emin = np.min(E)  # calcula nível de ruído de fundo
-  plt.figure
-  fig, ax = plt.subplots(figsize=(15, 3))
-  plt.plot(E - Emin)
-  plt.title(f'Energia da Voz ({integrante_grupo}) arquivo:{audio}')
-  plt.ylabel('Energia[db]'); plt.xlabel('Segmento')
-</pre></p>
                     <p><b>Dígitos - Gráficos dos arquivos de áudio e Energia da voz</b></p>
                     <p>Beatriz</p>
                     <div class="text-center mb-3">
@@ -389,7 +331,7 @@ for audio in files:
                   <div class="ml-auto my-2 my-lg-0">
                               <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab6/parte3.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab7/part3.mp3" type="audio/mp3">
             Your browser does not support the audio element.
             </audio>
           </div>
@@ -455,7 +397,7 @@ for audio in files:
             <h5 class="fg-primary">4. Repitição do mesmo procedimento para a voz gravada</h5>
             <hr>
             <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab6/parte_4.mp3" type="audio/mp3">
+                <source src="../../assets/audios/lab7/parte4.mp3" type="audio/mp3">
               Your browser does not support the audio element.
             </audio>
             <div>
