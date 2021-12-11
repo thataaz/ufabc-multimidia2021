@@ -912,8 +912,15 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
                   <div class="ml-auto my-2 my-lg-0">
                               <div class="caption">
           </div>
+                    <div class="caption">
+            <p><b>Mais rápido</b>: !ffmpeg -i holst128k.mp3 -filter:a "atempo=2.0" -vn holst128k_v2.mp3</p>
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/conclusao.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
             <p> Diminuindo as taxas, maiores frequências são removidas, causando grande diferença nos áudios de 8k, por exemplo. As modificações são facilmente percebidas nos espectrogramas.
-                    Entretanto, valores menores que 32 kbps não apresentam variações quanto a compressão do arquivo, mesmo que a qualidade do áudio seja distinta.</p>
+                    Entretanto, para -b:a, valores menores que 32 kbps não apresentam variações quanto a compressão do arquivo, mesmo que a qualidade do áudio seja distinta.</p>
                <p>Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
               O inverso ocorre para os arquivos mais lentos. </p>
                   </div>
