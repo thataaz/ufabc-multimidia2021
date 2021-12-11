@@ -446,9 +446,9 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
           <pre>
      Comparação: Gustav Holst - St. Paul's Suite - Jig
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     37,9 MB      100            
-128k mp3    2957 kB      12,82
-64k mp3     1479 kB      6,41
+320 wav     23,0 MB      100            
+128k mp3    2957 kB      12,85
+64k mp3     1479 kB      6,4
 32k mp3     739 kB       3,2
 16k mp3     739 kB       3,2
 8k mp3      739 kB       3,2
@@ -458,14 +458,14 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
           <p><b>128 k - mp3</p></b>
           <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 128k jorge128k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'jorge128k.mp3':
+Output #0, mp3, to 'jorgebenj128k.mp3':
   Metadata:
     TSSE            : Lavf57.83.100
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=    2957kB time=00:03:09.18 bitrate= 128.0kbits/s speed=43.4x    
-video:0kB audio:2956kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020512%
+size=    3582kB time=00:03:49.17 bitrate= 128.0kbits/s speed=48.2x    
+video:0kB audio:3581kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.016933%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -482,14 +482,14 @@ video:0kB audio:2956kB subtitle:0kB other streams:0kB global headers:0kB muxing 
 <p><b>64 k - mp3</p></b>
           <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 64k jorge64k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'jorge64k.mp3':
+Output #0, mp3, to 'jorgebenj64k.mp3':
   Metadata:
     TSSE            : Lavf57.83.100
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=    1479kB time=00:03:09.18 bitrate=  64.0kbits/s speed=  51x    
-video:0kB audio:1478kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021999%
+size=    1791kB time=00:03:49.17 bitrate=  64.0kbits/s speed=44.5x    
+video:0kB audio:1791kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018160%%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -505,14 +505,14 @@ video:0kB audio:1478kB subtitle:0kB other streams:0kB global headers:0kB muxing 
 <p><b>32 k - mp3</p></b>
           <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 32k jorge32k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'jorge32k.mp3':
+Output #0, mp3, to 'jorgebenj32k.mp3':
   Metadata:
     TSSE            : Lavf57.83.100
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=66.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=65.9x    
+video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -528,14 +528,14 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
 <p><b>16 k - mp3</p></b>
           <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 16k jorge16k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'jorge16k.mp3':
+Output #0, mp3, to 'jorgebenj16k.mp3':
   Metadata:
     TSSE            : Lavf57.83.100
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=68.4x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=66.1x    
+video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -551,14 +551,14 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
 <p><b>8 k - mp3</p></b>
           <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 8k jorge8k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'jorge8k.mp3':
+Output #0, mp3, to 'jorgebenj8k.mp3':
   Metadata:
     TSSE            : Lavf57.83.100
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=71.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=69.4x    
+video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -574,12 +574,12 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
           <pre>
      Comparação: Jorge Ben Jor
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     37,9 MB      100            
-128k mp3    2957 kB      12,82
-64k mp3     1479 kB      6,41
-32k mp3     739 kB       3,2
-16k mp3     739 kB       3,2
-8k mp3      739 kB       3,2
+320 wav     27,9 MB      100            
+128k mp3    3581 kB      12,83
+64k mp3     1791 kB      6,41
+32k mp3     895 kB       3,2
+16k mp3     895 kB       3,2
+8k mp3      895 kB       3,2
           </pre>
  
           <p class="mb-3" style="color:deeppink"><b>Etta</b></p>
@@ -592,8 +592,8 @@ Output #0, mp3, to 'etta128k.mp3':
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=    2957kB time=00:03:09.18 bitrate= 128.0kbits/s speed=43.4x    
-video:0kB audio:2956kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020512%
+size=    2836kB time=00:03:01.44 bitrate= 128.1kbits/s speed=48.2x    
+video:0kB audio:2836kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021387%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -616,8 +616,8 @@ Output #0, mp3, to 'etta64k.mp3':
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=    1479kB time=00:03:09.18 bitrate=  64.0kbits/s speed=  51x    
-video:0kB audio:1478kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021999%
+size=    1418kB time=00:03:01.44 bitrate=  64.0kbits/s speed=47.7x    
+video:0kB audio:1418kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.022937%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -639,8 +639,8 @@ Output #0, mp3, to 'etta32k.mp3':
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=66.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=65.3x    
+video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -662,8 +662,8 @@ Output #0, mp3, to 'etta16k.mp3':
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=68.4x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=67.6x    
+video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -685,8 +685,8 @@ Output #0, mp3, to 'etta8k.mp3':
     Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
     Metadata:
       encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=71.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=72.3x    
+video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
 </pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
@@ -702,12 +702,12 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
           <pre>
      Comparação: Etta James
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     37,9 MB      100            
-128k mp3    2957 kB      12,82
-64k mp3     1479 kB      6,41
-32k mp3     739 kB       3,2
-16k mp3     739 kB       3,2
-8k mp3      739 kB       3,2
+320 wav     22,1 MB      100            
+128k mp3    2836 kB      12,83
+64k mp3     1418 kB      6,41
+32k mp3     709 kB       3,2
+16k mp3     709 kB       3,2
+8k mp3      709 kB       3,2
           </pre>
 
           <!-- Video -->
@@ -856,7 +856,7 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
           </div>
 
           <div class="card-page mt-3">
-            <h5 class="fg-primary">5. Conclusões</h5>
+            <h5 class="fg-primary">Conclusões</h5>
             <hr>
         
             <div>
@@ -865,7 +865,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
                   <div class="ml-auto my-2 my-lg-0">
                               <div class="caption">
           </div>
-            <p> Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
+            <p> Diminuindo as taxas, maiores frequências são removidas, causando grande diferença nos áudios de 8k, por exemplo. As modificações são facilmente percebidas nos espectrogramas.
+                    Entretanto, valores menores que 32 kbps não apresentam variações quanto a compressão do arquivo, mesmo que a qualidade do áudio seja distinta.</p>
+               <p>Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
               O inverso ocorre para os arquivos mais lentos. </p>
                   </div>
                 </div>
