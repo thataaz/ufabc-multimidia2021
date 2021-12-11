@@ -489,7 +489,50 @@ video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing o
             <p>Espectrograma</p>
             <img src="../../assets/img/lab8/holst8kespec.png" width="100%">
           </div>
-  
+  <p><b>q:a N, com N = 7</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -q:a 7 holst8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holstqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1565kB time=00:03:09.18 bitrate=  67.8kbits/s speed=64.6x    
+video:0kB audio:1565kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.016290%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holstqan7.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holstqan7.png" width="100%">
+          </div>
+  <p><b>q:a N, com N = 9</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -q:a 9 holst8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holstqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1344kB time=00:03:09.18 bitrate=  58.2kbits/s speed=82.4x    
+video:0kB audio:1343kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018973%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holstqan9.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holstqan9.png" width="100%">
+          </div>
           <pre>
      Comparação: Gustav Holst - St. Paul's Suite - Jig
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
@@ -499,6 +542,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
 32k mp3     739 kB       3,2
 16k mp3     739 kB       3,2
 8k mp3      739 kB       3,2
+--------------------------------
+q:a 7 mp3   1565 kB      6,8    
+q:a 9 mp3   1343 kB      5,83
           </pre>
     
           <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor</b></p>
