@@ -663,7 +663,51 @@ video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing o
             <p>Espectrograma</p>
             <img src="../../assets/img/lab8/jorge8kespec.png" width="100%">
           </div>
-  
+    <p><b>q:a N, com N = 7</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/JorgeBenJ.wav' -codec:a libmp3lame -q:a 7 jorgebenjqan.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'jorgebenjqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    2448kB time=00:03:49.17 bitrate=  87.5kbits/s speed=63.8x    
+video:0kB audio:2447kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010415%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holstqan7.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holstqan7.png" width="100%">
+          </div>
+          <pre>
+  <p><b>q:a N, com N = 9</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/JorgeBenJ.wav' -codec:a libmp3lame -q:a 9 jorgebenjqan.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'jorgebenjqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1793kB time=00:03:49.17 bitrate=  64.1kbits/s speed=  78x    
+video:0kB audio:1793kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.014215%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/jorgeqan9.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/jorgeqan9.png" width="100%">
+          </div>
           <pre>
      Comparação: Jorge Ben Jor
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
@@ -673,6 +717,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
 32k mp3     895 kB       3,2
 16k mp3     895 kB       3,2
 8k mp3      895 kB       3,2
+----------------------------
+q:a 7 mp3   2447 kB      8,7    
+q:a 9 mp3   1793 kB      6,42
           </pre>
  
           <p class="mb-3" style="color:deeppink"><b>Etta</b></p>
