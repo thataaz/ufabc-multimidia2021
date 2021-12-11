@@ -837,6 +837,50 @@ video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing o
             <p>Espectrograma</p>
             <img src="../../assets/img/lab8/etta8kespec.png" width="100%">
           </div>
+  <p><b>q:a N, com N = 7</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -q:a 7 ettaqan.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'ettaqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1759kB time=00:03:01.44 bitrate=  79.4kbits/s speed=65.2x    
+video:0kB audio:1759kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.014494%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/ettaqan7.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/ettaqan7.png" width="100%">
+          </div>
+  <p><b>q:a N, com N = 9</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/EttaBenJ.wav' -codec:a libmp3lame -q:a 9 ettabenjqan.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'ettaqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1388kB time=00:03:01.44 bitrate=  62.7kbits/s speed=78.2x    
+video:0kB audio:1388kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018364%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/ettaqan9.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/ettaqan9.png" width="100%">
+          </div>
   
           <pre>
      Comparação: Etta James
@@ -847,6 +891,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
 32k mp3     709 kB       3,2
 16k mp3     709 kB       3,2
 8k mp3      709 kB       3,2
+------------------------------
+q:a 7 mp3   1759 kB      7,95    
+q:a 9 mp3   1388 kB      6,28
           </pre>
 
           <!-- Video -->
@@ -1012,7 +1059,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
           </div>
             <p> Diminuindo as taxas, maiores frequências são removidas, causando grande diferença nos áudios de 8k, por exemplo. As modificações são facilmente percebidas nos espectrogramas.
                     Entretanto, para -b:a, valores menores que 32 kbps não apresentam variações quanto a compressão do arquivo, mesmo que a qualidade do áudio seja distinta.</p>
-               <p>Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
+                    <p>Para diferentes áudios, porém com parâmetros -b:a iguais, obtemos os mesmos resultados quanto a compressão. Já com -q:a N, para mesmo parâmetro porém com áudios distintos,
+                    as taxas de compressão são diferentes.</p>
+                    <p>Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
               O inverso ocorre para os arquivos mais lentos. </p>
                   </div>
                 </div>
