@@ -327,16 +327,132 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
           </pre>
           
           <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
+          <p><b>128 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 128k holst128k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holst128k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    2957kB time=00:03:09.18 bitrate= 128.0kbits/s speed=43.4x    
+video:0kB audio:2956kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020512%
+</pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/trocar.wav" type="audio/wav">
+              <source src="../../assets/audios/lab8/holst128k.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/llab8/trocar.png" width="100%">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst128kespec.png" width="100%">
           </div>
+
+
+<p><b>64 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 64k holst64k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holst64k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1479kB time=00:03:09.18 bitrate=  64.0kbits/s speed=  51x    
+video:0kB audio:1478kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021999%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holst64k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst64kespec.png" width="100%">
+          </div>
+
+<p><b>32 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 32k holst32k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holst32k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=66.6x    
+video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holst32k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst32kespec.png" width="100%">
+          </div>
+
+<p><b>16 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 16k holst16k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holst16k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=68.4x    
+video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holst16k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst16kespec.png" width="100%">
+          </div>
+
+<p><b>8 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 8k holst8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'holst8k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=71.6x    
+video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/holst8k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst8kespec.png" width="100%">
+          </div>
+  
+          <pre>
+     Comparação: Gustav Holst - St. Paul's Suite - Jig
+Arquivo     Tamanho      Arq. Comprimido / Original [%]
+320 wav     37,9 MB      100            
+128k mp3    2957 kB      12,82
+64k mp3     1479 kB      6,41
+32k mp3     739 kB       3,2
+16k mp3     739 kB       3,2
+8k mp3      739 kB       3,2
+          </pre>
     
           <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor</b></p>
           <div class="caption">
