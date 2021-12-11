@@ -315,6 +315,50 @@ video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing 
             <img src="../../assets/img/lab8/rush8kespec.png" width="100%">
           </div>
   
+  <p><b>q:a N, com N = 7</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -q:a 7 rush8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush8k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=73.9x    
+video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rushqan7.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rushqan7.png" width="100%">
+          </div>
+  <p><b>q:a N, com N = 9</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -q:a 9 rush8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rushqan.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    2343kB time=00:05:11.04 bitrate=  61.7kbits/s speed=79.8x    
+video:0kB audio:2343kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010880%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rushqan9.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rushqan9.png" width="100%">
+          </div>
           <pre>
      Comparação: Rush - The Spirit Of Radio
 Arquivo     Tamanho      Arq. Comprimido / Original [%]
@@ -324,6 +368,9 @@ Arquivo     Tamanho      Arq. Comprimido / Original [%]
 32k mp3     1215 kB      3,2
 16k mp3     1215 kB      3,2
 8k mp3      1215 kB      3,2
+-------------------------------
+q:a 7 mp3   3039 kB      8,01    
+q:a 9 mp3   2343 kB      6,18
           </pre>
           
           <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
