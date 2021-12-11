@@ -366,239 +366,77 @@ video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing 
             Your browser does not support the audio element.
             </audio>
           </div>
-          <p>Para cada áudio, foram utilizadas diferentes compressões. Os resultados podem ser comparados na Tabela 1.</p>
+          <p>Com diferentes tempos de reprodução, temos:.</p>
           
           <p class="mb-3" style="color:deeppink"><b>Rush</b></p>
           <div class="caption">
+            <p><b>Mais rápido</b>: !ffmpeg -i rush128k.mp3 -filter:a "atempo=2.0" -vn rush128k_v2.mp3</p>
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/Beatriz_digitos.wav" type="audio/wav">
+              <source src="../../assets/audios/lab7/rushx2.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
             <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab7/Beatriz_digitos_completo.png" width="100%">
+            <img src="../../assets/img/lab8/rush2x.png" width="100%">
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush2xespec.png" width="100%">
           </div>
           
-          <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
+             <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
           <div class="caption">
+            <p><b>Mais rápido</b>: !ffmpeg -i holst128k.mp3 -filter:a "atempo=2.0" -vn holst128k_v2.mp3</p>
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/Thais_texto.wav" type="audio/wav">
+              <source src="../../assets/audios/lab7/holstx2.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
             <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab7/thais_audiointeiro.png" width="100%">
+            <img src="../../assets/img/lab8/holst2x.png" width="100%">
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/holst2xespec.png" width="100%">
           </div>
     
           <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor</b></p>
           <div class="caption">
+            <p><b>Mais rápido</b>: !ffmpeg -i jorge128k.mp3 -filter:a "atempo=2.0" -vn jorge128k_v2.mp3</p>
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/Vanessa_texto.wav" type="audio/wav">
+              <source src="../../assets/audios/lab7/jorgex2.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
             <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab7/Vanessa_texto_completo.png" width="100%">
+            <img src="../../assets/img/lab8/jorge2x.png" width="100%">
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/jorge2xespec.png" width="100%">
           </div>
  
           <p class="mb-3" style="color:deeppink"><b>Etta James</b></p>
+          <p class="mb-3" style="color:deeppink"><b>Etta</b></p>
           <div class="caption">
+            <p><b>Mais rápido</b>: !ffmpeg -i etta128k.mp3 -filter:a "atempo=2.0" -vn etta128k_v2.mp3</p>
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/William_texto.wav" type="audio/wav">
+              <source src="../../assets/audios/lab7/ettax2.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
             <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab7/William_texto_completo.png" width="100%">
+            <img src="../../assets/img/lab8/etta2x.png" width="100%">
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/etta2xespec.png" width="100%">
           </div>
 
-          <div class="card-page mt-3">
-            <h5 class="fg-primary">3. Estimação da f<sub>0</sub> e do Pitch</h5>
-            <hr>
-            <div>
-              <div class="p-3">
-                <div class="">
-                  <div class="ml-auto my-2 my-lg-0">
-                              <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/part3.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-
-          <h5 style="color:deeppink; font-size:22px; margin-top: 30px;">Beatriz</h5>
-          <p style="color:deeppink"><b>Texto</b></p>
-          <div class="text-center mb-3">
-              <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-              <img src="../../assets/img/lab7/Beatriz_texto_f0.png" width="60%">
-          </div>
-          <p><b>Trajetória do Pitch</b></p>
-          <div class="text-center mb-3">
-              <img src="../../assets/img/lab7/Beatriz_texto_pitch.png" width="60%">
-          </div>
-          <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-          <div class="text-center mb-3">
-              <img src="../../assets/img/lab7/Beatriz_texto_espectrograma.png" width="60%">
-          </div>
-          <p style="color:deeppink"><b>Dígito</b></p>
-          <div class="text-center mb-3">
-              <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-              <img src="../../assets/img/lab7/Beatriz_digitos_f0.png" width="60%">
-          </div>
-          <p><b>Trajetória do Pitch</b></p>
-          <div class="text-center mb-3">
-              <img src="../../assets/img/lab7/Beatriz_digitos_pitch.png" width="60%">
-          </div>
-          <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-          <div class="text-center mb-3">
-              <img src="../../assets/img/lab7/Beatriz_digitos_espectrograma.png" width="60%">
-          </div>
-          <p style="color:deeppink"><b>Poesia</b></p>
-          <div class="text-center mb-3">
-            <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-            <img src="../../assets/img/lab7/Beatriz_poesia_f0.png" width="60%">
-            </div>
-            <p><b>Trajetória do Pitch</b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Beatriz_poesia_pitch.png" width="60%">
-            </div>
-            <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Beatriz_poesia_espectrograma.png" width="60%">
-            </div>
-                  
-            <h5 style="color:deeppink; font-size:22px; margin-top: 30px;">Thaís</h5>
-            <p style="color:deeppink"><b>Texto</b></p>
-            <div class="text-center mb-3">
-                <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                <img src="../../assets/img/lab7/Thais_texto_f0.png" width="60%">
-            </div>
-            <p><b>Trajetória do Pitch</b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Thais_texto_pitch.png" width="60%">
-            </div>
-            <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Thais_texto_espectrograma.png" width="60%">
-            </div>
-            <p style="color:deeppink"><b>Dígito</b></p>
-            <div class="text-center mb-3">
-                <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                <img src="../../assets/img/lab7/Thais_digitos_f0.png" width="60%">
-            </div>
-            <p><b>Trajetória do Pitch</b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Thais_digitos_pitch.png" width="60%">
-            </div>
-            <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-            <div class="text-center mb-3">
-                <img src="../../assets/img/lab7/Thais_digitos_espectrograma.png" width="60%">
-            </div>
-            <p style="color:deeppink"><b>Poesia</b></p>
-            <div class="text-center mb-3">
-              <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-              <img src="../../assets/img/lab7/Thais_poesia_f0.png" width="60%">
-              </div>
-              <p><b>Trajetória do Pitch</b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Thais_poesia_pitch.png" width="60%">
-              </div>
-              <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Thais_poesia_espectrograma.png" width="60%">
-              </div>
-
-              <h5 style="color:deeppink; font-size:22px; margin-top: 30px;">Vanessa</h5>
-              <p style="color:deeppink"><b>Texto</b></p>
-              <div class="text-center mb-3">
-                  <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                  <img src="../../assets/img/lab7/Vanessa_texto_f0.png" width="60%">
-              </div>
-              <p><b>Trajetória do Pitch</b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Vanessa_texto_pitch.png" width="60%">
-              </div>
-              <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Vanessa_texto_espectrograma.png" width="60%">
-              </div>
-              <p style="color:deeppink"><b>Dígito</b></p>
-              <div class="text-center mb-3">
-                  <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                  <img src="../../assets/img/lab7/Vanessa_digitos_f0.png" width="60%">
-              </div>
-              <p><b>Trajetória do Pitch</b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Vanessa_digitos_pitch.png" width="60%">
-              </div>
-              <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-              <div class="text-center mb-3">
-                  <img src="../../assets/img/lab7/Vanessa_digitos_espectrograma.png" width="60%">
-              </div>
-              <p style="color:deeppink"><b>Poesia</b></p>
-              <div class="text-center mb-3">
-                <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                <img src="../../assets/img/lab7/Vanessa_poesia_f0.png" width="60%">
-                </div>
-                <p><b>Trajetória do Pitch</b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/Vanessa_poesia_pitch.png" width="60%">
-                </div>
-                <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/Vanessa_poesia_espectrograma.png" width="60%">
-                </div>
-
-                <h5 style="color:deeppink; font-size:22px; margin-top: 30px;">William</h5>
-                <p style="color:deeppink"><b>Texto</b></p>
-                <div class="text-center mb-3">
-                    <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                    <img src="../../assets/img/lab7/William_texto_f0.png" width="60%">
-                </div>
-                <p><b>Trajetória do Pitch</b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/William_texto_pitch.png" width="60%">
-                </div>
-                <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/William_texto_espectrograma.png" width="60%">
-                </div>
-                <p style="color:deeppink"><b>Dígito</b></p>
-                <div class="text-center mb-3">
-                    <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                    <img src="../../assets/img/lab7/William_digitos_f0.png" width="60%">
-                </div>
-                <p><b>Trajetória do Pitch</b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/William_digitos_pitch.png" width="60%">
-                </div>
-                <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-                <div class="text-center mb-3">
-                    <img src="../../assets/img/lab7/William_digitos_espectrograma.png" width="60%">
-                </div>
-                <p style="color:deeppink"><b>Poesia</b></p>
-                <div class="text-center mb-3">
-                  <p>Trajetória da f<sub>0</sub> usando algoritmo de pYIN</p>
-                  <img src="../../assets/img/lab7/William_poesia_f0.png" width="60%">
-                  </div>
-                  <p><b>Trajetória do Pitch</b></p>
-                  <div class="text-center mb-3">
-                      <img src="../../assets/img/lab7/William_poesia_pitch.png" width="60%">
-                  </div>
-                  <p><b>Espectrograma enfatizando a f<sub>0</sub> </b></p>
-                  <div class="text-center mb-3">
-                      <img src="../../assets/img/lab7/William_poesia_espectrograma.png" width="60%">
-                  </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div class="card-page mt-3">
             <h5 class="fg-primary">5. Conclusões</h5>
@@ -636,7 +474,7 @@ William       106                           106                            120
           
             <div class="p-3">
                 <div class="ml-auto my-2 my-lg-0">
-                  <a href="https://drive.google.com/file/d/1LTFsBqouHz8wMuSQJVZrgqQ_TUcz4BoW/view?usp=sharing" class="btn btn-primary rounded-pill">Acesse o Notebook</a>
+                  <a href="https://drive.google.com/file/d/1-sm0yqncb4a5etzE7hO6rofJRnwHd6lj/view?usp=sharing" class="btn btn-primary rounded-pill">Acesse o Notebook</a>
                 </div>
             </div>
           </div>
