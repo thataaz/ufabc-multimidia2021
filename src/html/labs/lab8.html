@@ -199,16 +199,122 @@
           <p>Para cada áudio, foram utilizadas diferentes compressões. Os resultados podem ser comparados na Tabela 1.</p>
           
           <p class="mb-3" style="color:deeppink"><b>Rush</b></p>
+          <p><b>128 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 128k rush128k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush128k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    4861kB time=00:05:11.04 bitrate= 128.0kbits/s speed=50.6x    
+video:0kB audio:4861kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.012477%
+</pre>
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab7/Beatriz_digitos.wav" type="audio/wav">
+              <source src="../../assets/audios/lab8/rush128k.wav" type="audio/wav">
             Your browser does not support the audio element.
             </audio>
           </div>
           <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab7/Beatriz_digitos_completo.png" width="100%">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush128kespec.png" width="100%">
           </div>
+
+
+<p><b>64 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 64k rush64k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush64k.mp3':
+Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
+    Metadata:
+    encoder         : Lavc57.107.100 libmp3lame
+size=    2431kB time=00:05:11.04 bitrate=  64.0kbits/s speed=47.2x    
+video:0kB audio:2430kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.013381%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rush64k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush64kespec.png" width="100%">
+          </div>
+
+<p><b>32 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 32k rush32k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush32k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=69.1x    
+video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rush32k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush32kespec.png" width="100%">
+          </div>
+
+<p><b>16 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 16k rush16k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush32k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=69.1x    
+video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rush16k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush16kespec.png" width="100%">
+          </div>
+
+<p><b>8 k - mp3</p></b>
+          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 8k rush8k.mp3</i> , obtemos:</p>
+<pre>
+Output #0, mp3, to 'rush8k.mp3':
+  Metadata:
+    TSSE            : Lavf57.83.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 libmp3lame
+size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=73.9x    
+video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
+</pre>
+          <div class="caption">
+            <audio controls style="max-width: 100%">
+              <source src="../../assets/audios/lab8/rush16k.wav" type="audio/wav">
+            Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="text-center mb-3">
+            <p>Espectrograma</p>
+            <img src="../../assets/img/lab8/rush16kespec.png" width="100%">
+          </div>
+          
           
           <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
           <div class="caption">
