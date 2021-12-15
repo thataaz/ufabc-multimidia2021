@@ -115,933 +115,270 @@
             <hr>
             <div class="caption">
               <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab8/audios_lab" type="audio/mp3">
+                <source src="../../assets/audios/lab9/audios_lab" type="audio/mp3">
               Your browser does not support the audio element.
               </audio>
             </div>
-            <p>As músicas escolhidas estão abaixo:</p>
-            <p class="mb-3" style="color:deeppink"><b>Rush - The Spirit Of Radio</b></p>
-            <div class="caption">
-              <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab8/Rush.wav" type="audio/wav">
-              Your browser does not support the audio element.
-              </audio>
-            </div>
-           <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/Rush320kEspec.png" width="100%">
-          </div>
-           <div class="text-center mb-3">
-            <p>Forma de onda</p>
-            <img src="../../assets/img/lab8/Rush320kformadeonda.png" width="100%">
-          </div>  
-          
-            <p class="mb-3" style="color:deeppink"><b>Gustav Holst - St. Paul's Suite - Jig</b></p>
-            <div class="caption">
-              <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab8/Holst.wav" type="audio/wav">
-              Your browser does not support the audio element.
-              </audio>
-             <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/Holst320kEspec.png" width="100%">
-          </div>
-           <div class="text-center mb-3">
-            <p>Forma de onda</p>
-            <img src="../../assets/img/lab8/Holst320kformadeonda.png" width="100%">
-          </div>  
-              
-            <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor - O telefone tocou novamente</b></p>
-            <div class="caption">
-              <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab8/JorgeBenJ.wav" type="audio/wav">
-              Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/JorgeBenJ320kEspec.png" width="100%">
-          </div>
-           <div class="text-center mb-3">
-            <p>Forma de onda</p>
-            <img src="../../assets/img/lab8/JorgeBenJ320kformadeonda.png" width="100%">
-          </div>  
-           
-            <p class="mb-3" style="color:deeppink"><b>Etta James - At Last</b></p>
-            <div class="caption">
-              <audio controls style="max-width: 100%">
-                <source src="../../assets/audios/lab8/Etta.wav" type="audio/wav">
-              Your browser does not support the audio element.
-              </audio>
-            </div>
-            <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/Etta320kEspec.png" width="100%">
-          </div>
-           <div class="text-center mb-3">
-            <p>Forma de onda</p>
-            <img src="../../assets/img/lab8/Etta320kformadeonda.png" width="100%">
-          </div>  
-
+            
             <!-- Video -->
   
           
           </div>
 
         <div class="card-page mt-3">
-          <h5 class="fg-primary">1. Comparar os espectrogramas e as taxas de compressão nos arquivos gravados</h5>
+          <h5 class="fg-primary">Músicas - Integrantes</h5>
           <hr>
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/pt1.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab9/pt1.mp3" type="audio/mp3">
             Your browser does not support the audio element.
             </audio>
           </div>
-          <p>Para cada áudio, foram utilizadas diferentes compressões. Os resultados podem ser comparados na Tabela 1.</p>
+          <p>Abaixo, para cada integrante do grupo</p>
           
-          <p class="mb-3" style="color:deeppink"><b>Rush</b></p>
-          <p><b>128 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 128k rush128k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'rush128k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    4861kB time=00:05:11.04 bitrate= 128.0kbits/s speed=50.6x    
-video:0kB audio:4861kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.012477%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush128k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush128kespec.png" width="100%">
-          </div>
+          <p class="mb-3" style="color:deeppink"><b>Beatriz</b></p>
 
-
-<p><b>64 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 64k rush64k.mp3</i> , obtemos:</p>
 <pre>
-Output #0, mp3, to 'rush64k.mp3':
-Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
-    Metadata:
-    encoder         : Lavc57.107.100 libmp3lame
-size=    2431kB time=00:05:11.04 bitrate=  64.0kbits/s speed=47.2x    
-video:0kB audio:2430kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.013381%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush64k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush64kespec.png" width="100%">
-          </div>
+# Música Beatriz
 
-<p><b>32 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 32k rush32k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'rush32k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=69.1x    
-video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush32k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush32kespec.png" width="100%">
-          </div>
+beatriz = music_pb2.NoteSequence()
 
-<p><b>16 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 16k rush16k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'rush32k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=69.1x    
-video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush16k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush16kespec.png" width="100%">
-          </div>
-
-<p><b>8 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -b:a 8k rush8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'rush8k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=73.9x    
-video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush8k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush8kespec.png" width="100%">
-          </div>
+# VozesdaMinhaCabeça
+beatriz.notes.add(pitch=78, start_time=0.0, end_time=0.5, velocity=80)
+beatriz.notes.add(pitch=74, start_time=0.5, end_time=1.0, velocity=80)
+beatriz.notes.add(pitch=72, start_time=1.0, end_time=1.5, velocity=80)
+beatriz.notes.add(pitch=72, start_time=1.5, end_time=2.0, velocity=80)
+beatriz.notes.add(pitch=79, start_time=2.0, end_time=2.5, velocity=80)
+beatriz.notes.add(pitch=76, start_time=2.5, end_time=3.0, velocity=80)
+beatriz.notes.add(pitch=76, start_time=3.0, end_time=4.0, velocity=80)
+beatriz.notes.add(pitch=76, start_time=4.0, end_time=4.5, velocity=80)
+beatriz.notes.add(pitch=73, start_time=4.5, end_time=5.0, velocity=80)
+beatriz.notes.add(pitch=73, start_time=5.0, end_time=5.5, velocity=50)
+beatriz.notes.add(pitch=76, start_time=5.5, end_time=6.0, velocity=90)
+beatriz.notes.add(pitch=78, start_time=6.0, end_time=6.5, velocity=80)
+beatriz.notes.add(pitch=79, start_time=6.5, end_time=7.0, velocity=80)
+beatriz.notes.add(pitch=77, start_time=7.0, end_time=8.0, velocity=80) 
+beatriz.notes.add(pitch=76, start_time=8.0, end_time=8.5, velocity=80)
+beatriz.notes.add(pitch=72, start_time=8.5, end_time=9.0, velocity=80)
+beatriz.notes.add(pitch=72, start_time=9.0, end_time=9.25, velocity=80)
+beatriz.notes.add(pitch=75, start_time=9.25, end_time=10.0, velocity=80)
   
-  <p><b>q:a N, com N = 7</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -q:a 7 rush8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'rush8k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1215kB time=00:05:11.04 bitrate=  32.0kbits/s speed=73.9x    
-video:0kB audio:1215kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020976%
+beatriz.total_time = 10.0
+
+beatriz.tempos.add(qpm=60);
+
+# This is a colab utility method that visualizes a NoteSequence.
+note_seq.plot_sequence(beatriz)
+
+# This is a colab utility method that plays a NoteSequence.
+note_seq.play_sequence(beatriz,synth=note_seq.fluidsynth)
 </pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rushqan7.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
           <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rushqan7.png" width="100%">
+            <p>plot</p>
+            <img src="../../assets/img/lab9/beatriz.png" width="100%">
           </div>
-  <p><b>q:a N, com N = 9</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Rush.wav' -codec:a libmp3lame -q:a 9 rush8k.mp3</i> , obtemos:</p>
+
+          <p class="mb-3" style="color:deeppink"><b>Thais</b></p>
+
 <pre>
-Output #0, mp3, to 'rushqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    2343kB time=00:05:11.04 bitrate=  61.7kbits/s speed=79.8x    
-video:0kB audio:2343kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010880%
+# Música Thais
+
+thais = music_pb2.NoteSequence()
+
+thais.notes.add(pitch=40, start_time=0, end_time=0.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=36, start_time=0, end_time=0.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=38, start_time=0, end_time=0.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=42, start_time=0, end_time=0.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=43, start_time=0.25, end_time=0.375, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=44, start_time=0.375, end_time=0.5, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=45, start_time=0.5, end_time=0.625, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=50, start_time=0.5, end_time=0.625, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=38, start_time=0.625, end_time=0.875, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=50, start_time=0.75, end_time=0.875, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=45, start_time=0.75, end_time=0.875, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=36, start_time=1, end_time=1.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=46, start_time=1, end_time=1.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=46, start_time=1, end_time=1.125, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=46, start_time=1.25, end_time=1.375, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=48, start_time=1.25, end_time=1.375, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=50, start_time=1.25, end_time=1.375, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=48, start_time=1.375, end_time=1.450, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=42, start_time=1.450, end_time=1.50, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=48, start_time=1.50, end_time=1.575, is_drum=True, instrument=10, velocity=80)
+thais.notes.add(pitch=50, start_time=1.575, end_time=1.6, is_drum=True, instrument=10, velocity=80)
+
+thais.total_time = 1.6
+
+thais.tempos.add(qpm=80)
+
+# This is a colab utility method that visualizes a NoteSequence.
+note_seq.plot_sequence(thais)
+
 </pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rushqan9.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
+                    <div class="text-center mb-3">
+            <p>plot</p>
+            <img src="../../assets/img/lab9/thais.png" width="100%">
           </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rushqan9.png" width="100%">
+
+                    <p class="mb-3" style="color:deeppink"><b>Vanessa</b></p>
+
+<pre>
+# Música Vanessa
+
+vanessa = music_pb2.NoteSequence()
+
+vanessa.notes.add(pitch=70, start_time=0.0, end_time=0.5, velocity=80)
+vanessa.notes.add(pitch=71, start_time=0.5, end_time=1.0, velocity=80)
+vanessa.notes.add(pitch=72, start_time=1.0, end_time=1.5, velocity=80)
+vanessa.notes.add(pitch=73, start_time=1.5, end_time=2.0, velocity=80)
+vanessa.notes.add(pitch=76, start_time=2.0, end_time=2.5, velocity=80)
+vanessa.notes.add(pitch=76, start_time=2.0, end_time=2.5, velocity=80)
+vanessa.notes.add(pitch=76, start_time=2.0, end_time=2.5, velocity=80)
+vanessa.notes.add(pitch=70, start_time=2.5, end_time=3.0, velocity=100)
+vanessa.notes.add(pitch=78, start_time=3.0, end_time=3.5, velocity=100)
+vanessa.notes.add(pitch=76, start_time=3.5, end_time=4.0, velocity=100)
+vanessa.notes.add(pitch=76, start_time=4.0, end_time=4.5, velocity=90)
+vanessa.notes.add(pitch=77, start_time=4.5, end_time=5.0, velocity=90)
+vanessa.notes.add(pitch=72, start_time=5.0, end_time=6.0, velocity=80) 
+vanessa.notes.add(pitch=73, start_time=6.0, end_time=7.5, velocity=80)  
+vanessa.notes.add(pitch=74, start_time=7.5, end_time=8.0, velocity=80)
+vanessa.notes.add(pitch=74, start_time=8.0, end_time=9.0, velocity=80) 
+vanessa.notes.add(pitch=80, start_time=9.0, end_time=9.5, velocity=80)  
+vanessa.notes.add(pitch=80, start_time=9.5, end_time=10.0, velocity=80)  
+vanessa.total_time = 10.0
+
+vanessa.tempos.add(qpm=60);
+
+# This is a colab utility method that visualizes a NoteSequence.
+note_seq.plot_sequence(vanessa)
+
+# This is a colab utility method that plays a NoteSequence.
+note_seq.play_sequence(vanessa,synth=note_seq.fluidsynth)
+
+
+</pre>
+                    <div class="text-center mb-3">
+            <p>plot</p>
+            <img src="../../assets/img/lab9/vanessa.png" width="100%">
           </div>
-          <pre>
-     Comparação: Rush - The Spirit Of Radio
-Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     37,9 MB      100            
-128k mp3    4861 kB      12,82
-64k mp3     2431 kB      6,41
-32k mp3     1215 kB      3,2
-16k mp3     1215 kB      3,2
-8k mp3      1215 kB      3,2
--------------------------------
-q:a 7 mp3   3039 kB      8,01    
-q:a 9 mp3   2343 kB      6,18
-          </pre>
           
-          <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
-          <p><b>128 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 128k holst128k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holst128k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    2957kB time=00:03:09.18 bitrate= 128.0kbits/s speed=43.4x    
-video:0kB audio:2956kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.020512%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holst128k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst128kespec.png" width="100%">
-          </div>
+                    <p class="mb-3" style="color:deeppink"><b>William</b></p>
 
+<pre>
+# Música William
 
-<p><b>64 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 64k holst64k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holst64k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1479kB time=00:03:09.18 bitrate=  64.0kbits/s speed=  51x    
-video:0kB audio:1478kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021999%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holst64k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst64kespec.png" width="100%">
-          </div>
+william = music_pb2.NoteSequence()
 
-<p><b>32 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 32k holst32k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holst32k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=66.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holst32k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst32kespec.png" width="100%">
-          </div>
+william.notes.add(pitch=70, start_time=0.0, end_time=0.5, velocity=80)
+william.notes.add(pitch=76, start_time=0.5, end_time=1.5, velocity=80)
+william.notes.add(pitch=78, start_time=1.5, end_time=2.0, velocity=80)
+william.notes.add(pitch=78, start_time=2.0, end_time=2.5, velocity=80)
+william.notes.add(pitch=76, start_time=2.5, end_time=3.5, velocity=80)
+william.notes.add(pitch=81, start_time=3.7, end_time=4.5, velocity=80)
+william.notes.add(pitch=81, start_time=4.5, end_time=5.3, velocity=80)
+william.notes.add(pitch=74, start_time=5.5, end_time=7.3, velocity=80)
 
-<p><b>16 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 16k holst16k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holst16k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=68.4x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holst16k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst16kespec.png" width="100%">
-          </div>
+william.total_time = 7.5
 
-<p><b>8 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -b:a 8k holst8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holst8k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     739kB time=00:03:09.18 bitrate=  32.0kbits/s speed=71.6x    
-video:0kB audio:739kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.034484%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holst8k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst8kespec.png" width="100%">
-          </div>
-  <p><b>q:a N, com N = 7</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -q:a 7 holst8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holstqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1565kB time=00:03:09.18 bitrate=  67.8kbits/s speed=64.6x    
-video:0kB audio:1565kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.016290%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holstqan7.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holstqan7.png" width="100%">
-          </div>
-  <p><b>q:a N, com N = 9</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Holst.wav' -codec:a libmp3lame -q:a 9 holst8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'holstqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1344kB time=00:03:09.18 bitrate=  58.2kbits/s speed=82.4x    
-video:0kB audio:1343kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018973%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holstqan9.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holstqan9.png" width="100%">
-          </div>
-          <pre>
-     Comparação: Gustav Holst - St. Paul's Suite - Jig
-Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     23,0 MB      100            
-128k mp3    2957 kB      12,85
-64k mp3     1479 kB      6,4
-32k mp3     739 kB       3,2
-16k mp3     739 kB       3,2
-8k mp3      739 kB       3,2
---------------------------------
-q:a 7 mp3   1565 kB      6,8    
-q:a 9 mp3   1343 kB      5,83
-          </pre>
-    
-          <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor</b></p>
-          <p><b>128 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 128k jorge128k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenj128k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    3582kB time=00:03:49.17 bitrate= 128.0kbits/s speed=48.2x    
-video:0kB audio:3581kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.016933%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge128k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge128kespec.png" width="100%">
-          </div>
+william.tempos.add(qpm=60);
 
+# This is a colab utility method that visualizes a NoteSequence.
+note_seq.plot_sequence(william)
 
-<p><b>64 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 64k jorge64k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenj64k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1791kB time=00:03:49.17 bitrate=  64.0kbits/s speed=44.5x    
-video:0kB audio:1791kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018160%%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge64k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge64kespec.png" width="100%">
-          </div>
+# This is a colab utility method that plays a NoteSequence.
+note_seq.play_sequence(william,synth=note_seq.fluidsynth)
 
-<p><b>32 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 32k jorge32k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenj32k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=65.9x    
-video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
 </pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge32k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
+                    <div class="text-center mb-3">
+            <p>plot</p>
+            <img src="../../assets/img/lab8/william.png" width="100%">
           </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge32kespec.png" width="100%">
-          </div>
-
-<p><b>16 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 16k jorge16k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenj16k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=66.1x    
-video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge16k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge16kespec.png" width="100%">
-          </div>
-
-<p><b>8 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Jorge.wav' -codec:a libmp3lame -b:a 8k jorge8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenj8k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     896kB time=00:03:49.17 bitrate=  32.0kbits/s speed=69.4x    
-video:0kB audio:895kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.028467%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge8k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge8kespec.png" width="100%">
-          </div>
-    <p><b>q:a N, com N = 7</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/JorgeBenJ.wav' -codec:a libmp3lame -q:a 7 jorgebenjqan.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenjqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    2448kB time=00:03:49.17 bitrate=  87.5kbits/s speed=63.8x    
-video:0kB audio:2447kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.010415%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorgeqan7.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-            <p>Espectrograma</p>
-          <div class="text-center mb-3">
-            <img src="../../assets/img/lab8/jorgeqan7.png" width="100%">
-          </div>
-  <p><b>q:a N, com N = 9</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/JorgeBenJ.wav' -codec:a libmp3lame -q:a 9 jorgebenjqan.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'jorgebenjqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1793kB time=00:03:49.17 bitrate=  64.1kbits/s speed=  78x    
-video:0kB audio:1793kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.014215%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorgeqan9.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorgeqan9.png" width="100%">
-          </div>
-          <pre>
-     Comparação: Jorge Ben Jor
-Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     27,9 MB      100            
-128k mp3    3581 kB      12,83
-64k mp3     1791 kB      6,41
-32k mp3     895 kB       3,2
-16k mp3     895 kB       3,2
-8k mp3      895 kB       3,2
-----------------------------
-q:a 7 mp3   2447 kB      8,7    
-q:a 9 mp3   1793 kB      6,42
-          </pre>
- 
-          <p class="mb-3" style="color:deeppink"><b>Etta</b></p>
-          <p><b>128 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -b:a 128k etta128k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'etta128k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 128 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    2836kB time=00:03:01.44 bitrate= 128.1kbits/s speed=48.2x    
-video:0kB audio:2836kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.021387%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta128k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta128kespec.png" width="100%">
-          </div>
-
-
-<p><b>64 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -b:a 64k etta64k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'etta64k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 64 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1418kB time=00:03:01.44 bitrate=  64.0kbits/s speed=47.7x    
-video:0kB audio:1418kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.022937%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta64k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta64kespec.png" width="100%">
-          </div>
-
-<p><b>32 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -b:a 32k etta32k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'etta32k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 32 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=65.3x    
-video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta32k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta32kespec.png" width="100%">
-          </div>
-
-<p><b>16 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -b:a 16k etta16k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'etta16k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 16 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=67.6x    
-video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta16k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta16kespec.png" width="100%">
-          </div>
-
-<p><b>8 k - mp3</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -b:a 8k etta8k.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'etta8k.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p, 8 kb/s
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=     709kB time=00:03:01.44 bitrate=  32.0kbits/s speed=72.3x    
-video:0kB audio:709kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.035955%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta8k.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta8kespec.png" width="100%">
-          </div>
-  <p><b>q:a N, com N = 7</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/Etta.wav' -codec:a libmp3lame -q:a 7 ettaqan.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'ettaqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1759kB time=00:03:01.44 bitrate=  79.4kbits/s speed=65.2x    
-video:0kB audio:1759kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.014494%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/ettaqan7.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/ettaqan7.png" width="100%">
-          </div>
-  <p><b>q:a N, com N = 9</p></b>
-          <p>Utilizando <i>!ffmpeg -i '/content/drive/MyDrive/Colab Notebooks/Lab 8/EttaBenJ.wav' -codec:a libmp3lame -q:a 9 ettabenjqan.mp3</i> , obtemos:</p>
-<pre>
-Output #0, mp3, to 'ettaqan.mp3':
-  Metadata:
-    TSSE            : Lavf57.83.100
-    Stream #0:0: Audio: mp3 (libmp3lame), 32000 Hz, stereo, s16p
-    Metadata:
-      encoder         : Lavc57.107.100 libmp3lame
-size=    1388kB time=00:03:01.44 bitrate=  62.7kbits/s speed=78.2x    
-video:0kB audio:1388kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.018364%
-</pre>
-          <div class="caption">
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/ettaqan9.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/ettaqan9.png" width="100%">
-          </div>
-  
-          <pre>
-     Comparação: Etta James
-Arquivo     Tamanho      Arq. Comprimido / Original [%]
-320 wav     22,1 MB      100            
-128k mp3    2836 kB      12,83
-64k mp3     1418 kB      6,41
-32k mp3     709 kB       3,2
-16k mp3     709 kB       3,2
-8k mp3      709 kB       3,2
-------------------------------
-q:a 7 mp3   1759 kB      7,95    
-q:a 9 mp3   1388 kB      6,28
-          </pre>
-
+          
           <!-- Video -->
+          
+          
 
         
         </div>
         <div class="card-page mt-3">
-            <h5 class="fg-primary">2. Apresentar as formas de onda e os espectrogramas para os arquivos com tempo modificados.</h5>
+            <h5 class="fg-primary">Música criada para reproduzir em cada ambiente</h5>
             <hr>
           <hr>
           <div class="caption">
             <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/pt2.mp3" type="audio/mp3">
+              <source src="../../assets/audios/lab9/pt2.mp3" type="audio/mp3">
             Your browser does not support the audio element.
             </audio>
           </div>
           <p>Com diferentes tempos de reprodução, temos:.</p>
-          
-          <p class="mb-3" style="color:deeppink"><b>Rush</b></p>
-          <div class="caption">
-            <p><b>Mais rápido</b>: !ffmpeg -i rush128k.mp3 -filter:a "atempo=2.0" -vn rush128k_v2.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rush2x.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/rush2x.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rush2xespec.png" width="100%">
-          </div>
-         <div class="caption">
-          <p><b>Mais lento</b>: !ffmpeg -i rush128k.mp3 -filter:a "atempo=0.8" -vn rush128k_v3.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/rushx05.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/rushx05.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/rushx05espec.png" width="100%">
-          </div>
-       
-          
-             <p class="mb-3" style="color:deeppink"><b>Holst</b></p>
-          <div class="caption">
-            <p><b>Mais rápido</b>: !ffmpeg -i holst128k.mp3 -filter:a "atempo=2.0" -vn holst128k_v2.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holstx2.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/holst2x.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holst2xespec.png" width="100%">
-          </div>
-          <div class="caption">
-            <p><b>Mais lento</b>: !ffmpeg -i holst128k.mp3 -filter:a "atempo=0.8" -vn holst128k_v3.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/holstx05.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/holstx05.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/holstx05espec.png" width="100%">
-          </div>
-    
-          <p class="mb-3" style="color:deeppink"><b>Jorge Ben Jor</b></p>
-          <div class="caption">
-            <p><b>Mais rápido</b>: !ffmpeg -i jorge128k.mp3 -filter:a "atempo=2.0" -vn jorge128k_v2.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorge2x.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/jorge2x.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorge2xespec.png" width="100%">
-          </div>
-          <div class="caption">
-            <p><b>Mais lento</b>: !ffmpeg -i jorge128k.mp3 -filter:a "atempo=0.8" -vn jorge128k_v3.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/jorgex05.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/jorgex05.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/jorgex05espec.png" width="100%">
-          </div>
- 
-          <p class="mb-3" style="color:deeppink"><b>Etta James</b></p>
-          <div class="caption">
-            <p><b>Mais rápido</b>: !ffmpeg -i etta128k.mp3 -filter:a "atempo=2.0" -vn etta128k_v2.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/etta2x.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/etta2x.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/etta2xespec.png" width="100%">
-          </div>
-          <div class="caption">
-            <p><b>Mais lento</b>: !ffmpeg -i etta128k.mp3 -filter:a "atempo=0.8" -vn etta128k_v3.mp3</p>
-            <audio controls style="max-width: 100%">
-              <source src="../../assets/audios/lab8/ettax05.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="text-center mb-3">
-            <p>Gráfico da forma de onda</p>
-            <img src="../../assets/img/lab8/ettax05.png" width="100%">
-          </div>
-          <div class="text-center mb-3">
-            <p>Espectrograma</p>
-            <img src="../../assets/img/lab8/ettax05espec.png" width="100%">
-          </div>
+ <pre>
+ # Música Criada
 
+musica = music_pb2.NoteSequence()
+
+musica.notes.add(pitch=70, start_time=0.0, end_time=0.5, velocity=80)
+musica.notes.add(pitch=76, start_time=0.5, end_time=1.5, velocity=80)
+musica.notes.add(pitch=78, start_time=1.5, end_time=2.0, velocity=80)
+musica.notes.add(pitch=78, start_time=2.0, end_time=2.5, velocity=80)
+musica.notes.add(pitch=76, start_time=2.5, end_time=3.5, velocity=80)
+musica.notes.add(pitch=81, start_time=3.7, end_time=4.5, velocity=80)
+musica.notes.add(pitch=81, start_time=4.5, end_time=5.3, velocity=80)
+musica.notes.add(pitch=74, start_time=5.5, end_time=7.3, velocity=80)
+
+musica.notes.add(pitch=70, start_time=7.3, end_time=8.0, velocity=80)
+musica.notes.add(pitch=71, start_time=8.0, end_time=8.5, velocity=80)
+musica.notes.add(pitch=72, start_time=8.5, end_time=9.5, velocity=80)
+musica.notes.add(pitch=73, start_time=9.5, end_time=10.0, velocity=80)
+musica.notes.add(pitch=76, start_time=10.0, end_time=10.5, velocity=80)
+musica.notes.add(pitch=76, start_time=10.5, end_time=11.0, velocity=80)
+musica.notes.add(pitch=76, start_time=11.0, end_time=11.5, velocity=80)
+musica.notes.add(pitch=70, start_time=11.5, end_time=12.0, velocity=100)
+musica.notes.add(pitch=78, start_time=12.0, end_time=12.5, velocity=100)
+musica.notes.add(pitch=76, start_time=12.5, end_time=13.0, velocity=100)
+musica.notes.add(pitch=76, start_time=13.0, end_time=13.5, velocity=90)
+musica.notes.add(pitch=77, start_time=13.5, end_time=14.0, velocity=90)
+musica.notes.add(pitch=72, start_time=14.0, end_time=14.5, velocity=80) 
+musica.notes.add(pitch=73, start_time=14.5, end_time=15.0, velocity=80)  
+musica.notes.add(pitch=74, start_time=15.0, end_time=15.5, velocity=80)
+musica.notes.add(pitch=74, start_time=15.5, end_time=16.0, velocity=80) 
+musica.notes.add(pitch=80, start_time=16.0, end_time=16.5, velocity=80)  
+musica.notes.add(pitch=80, start_time=16.5, end_time=17.0, velocity=80)  
+
+musica.notes.add(pitch=78, start_time=17.0, end_time=17.5, velocity=80)
+musica.notes.add(pitch=74, start_time=17.5, end_time=18.0, velocity=80)
+musica.notes.add(pitch=72, start_time=18.0, end_time=18.5, velocity=80)
+musica.notes.add(pitch=72, start_time=18.5, end_time=20.0, velocity=80)
+musica.notes.add(pitch=79, start_time=20.0, end_time=20.5, velocity=80)
+musica.notes.add(pitch=76, start_time=20.5, end_time=21.0, velocity=80)
+musica.notes.add(pitch=76, start_time=21.0, end_time=21.5, velocity=80)
+musica.notes.add(pitch=76, start_time=21.5, end_time=22.0, velocity=80)
+musica.notes.add(pitch=73, start_time=22.0, end_time=22.5, velocity=80)
+musica.notes.add(pitch=73, start_time=22.5, end_time=23.0, velocity=50)
+musica.notes.add(pitch=76, start_time=23.0, end_time=23.5, velocity=90)
+musica.notes.add(pitch=78, start_time=23.5, end_time=24.0, velocity=80)
+musica.notes.add(pitch=79, start_time=24.0, end_time=24.5, velocity=80)
+musica.notes.add(pitch=77, start_time=24.5, end_time=25.0, velocity=80) 
+musica.notes.add(pitch=76, start_time=25.0, end_time=25.5, velocity=80)
+musica.notes.add(pitch=72, start_time=25.5, end_time=26.0, velocity=80)
+musica.notes.add(pitch=72, start_time=26.5, end_time=27.0, velocity=80)
+musica.notes.add(pitch=75, start_time=27.0, end_time=28.0, velocity=80)
+
+musica.total_time = 29.0
+
+musica.tempos.add(qpm=60);
+
+# This is a colab utility method that visualizes a NoteSequence.
+note_seq.plot_sequence(musica)
+
+# This is a colab utility method that plays a NoteSequence.
+note_seq.play_sequence(musica,synth=note_seq.fluidsynth)
+ </pre>
+          <div class="text-center mb-3">
+            <p>Gráfico</p>
+            <img src="../../assets/img/lab9/musicacriada" width="100%">
+          </div>
+          <div class="text-center mb-3">
+            
           <div class="card-page mt-3">
             <h5 class="fg-primary">Conclusões</h5>
             <hr>
@@ -1058,12 +395,8 @@ q:a 9 mp3   1388 kB      6,28
             Your browser does not support the audio element.
             </audio>
           </div>
-            <p> Diminuindo as taxas, maiores frequências são removidas, causando grande diferença nos áudios de 8k, por exemplo. As modificações são facilmente percebidas nos espectrogramas.
-                    Entretanto, para -b:a, valores menores que 32 kbps não apresentam variações quanto a compressão do arquivo, mesmo que a qualidade do áudio seja distinta.</p>
-                    <p>Para diferentes áudios, porém com parâmetros -b:a iguais, obtemos os mesmos resultados quanto a compressão. Já com -q:a N, para mesmo parâmetro porém com áudios distintos,
-                    as taxas de compressão são diferentes.</p>
-                    <p>Ao acelerar e diminuir a velocidade de dos arquivos, é possível notar mudanças na formas de onda: nos arquivos acelerados, os módulos de alguns pontos são maiores.
-              O inverso ocorre para os arquivos mais lentos. </p>
+            <p> </p>
+                    <p> </p>
                   </div>
                 </div>
               </div>
@@ -1078,7 +411,7 @@ q:a 9 mp3   1388 kB      6,28
           
             <div class="p-3">
                 <div class="ml-auto my-2 my-lg-0">
-                  <a href="https://colab.research.google.com/drive/1yZzYR2RavOFyz6c-Cf208oIOWIUResEd?usp=sharing" class="btn btn-primary rounded-pill">Acesse o Notebook</a>
+                  <a href="https://colab.research.google.com/drive/1de8uCAKxiZk9C0bgrUvQJp5_1k1g6Jo_?usp=sharing" class="btn btn-primary rounded-pill">Acesse o Notebook</a>
                 </div>
             </div>
           </div>
